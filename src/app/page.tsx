@@ -9,13 +9,8 @@ export default async function Home() {
     <main className="home_page">
       <HomeBanner />
 
-      {/* <div
-        ref={elementRef}
-        className={`mission_vision_section ${isVisible ? "visible" : ""}`}
-      > */}
       <div className="wrapper_section">
         <div className="mission_vision_section visible">
-          {/* <MissionVisionWrapper> */}
           <div className="count_section">
             <div className="stat_card">
               <StatCard
@@ -35,6 +30,7 @@ export default async function Home() {
                 }
                 count={16000}
                 label="Students"
+                showPlus={true}
               />
               <StatCard
                 icon={
@@ -61,6 +57,7 @@ export default async function Home() {
                 }
                 count={9}
                 label="States"
+                showPlus={false}
               />
               <StatCard
                 icon={
@@ -77,8 +74,9 @@ export default async function Home() {
                     />
                   </svg>
                 }
-                count={50}
+                count={63}
                 label="Institutions"
+                showPlus={false}
               />
             </div>
           </div>
@@ -105,12 +103,11 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          {/* </MissionVisionWrapper> */}
         </div>
       </div>
 
       <FoundersMessage />
-   <InstituteType/>
+      <InstituteType />
       <ExploreTeam />
     </main>
   );

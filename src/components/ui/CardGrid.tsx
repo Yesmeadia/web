@@ -1,7 +1,4 @@
 
-
-
-
 // components/CardGrid.tsx
 import Image from "next/image";
 import "./CardGrid.scss";

@@ -47,7 +47,7 @@ const HomeBanner = () => {
       text: "Empowering the Next Generation Through Knowledge",
     },
         {
-      image: "/carousal/gallery/swiper_desktop2.jpg",
+      image: "/home_bg_banner2.jpg",
       text: "A Child Without Education is Like a Bird Without Wings",
     },
     // {
@@ -55,8 +55,12 @@ const HomeBanner = () => {
     //   text: "Education Opens the Door to Freedom and Opportunity",
     // },
        {
-      image: "/carousal/gallery/swiper2.jpg",
+      image: "/home_bg_banner3.jpg",
       text: "Education Opens the Door to Freedom and Opportunity",
+    },
+    {
+      image: "/home_bg_banner4.jpg",
+      text: "Building Brighter Futures, One Child at a Time",
     },
 
 
@@ -65,17 +69,21 @@ const HomeBanner = () => {
 
   const mobileBanners = [
       {
-      image: "/carousal/gallery/swipermobile.jpg",
+      image: "/home_bg_banner1.png",
       text: "Empowering the Next Generation Through Knowledge",
     },
 
     {
-      image: "/carousal/gallery/swipermobile2.jpg",
+      image: "/home_bg_banner2.jpg",
       text: "Empowering the Next Generation Through Knowledge",
     },
         {
-      image: "/carousal/gallery/swipermobile3.jpg",
+      image: "/home_bg_banner3.jpg",
       text: "Education Opens the Door to Freedom and Opportunity",
+    },
+        {
+      image: "/home_bg_banner4.jpg",
+      text: "Building Brighter Futures, One Child at a Time",
     },
   ];
 

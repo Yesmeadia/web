@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
 
   return (
-    <>
+    <>  
       <section className="wrapper_section">
         <div className="alumni_banner_section">
           <div className="alumni_banner_contents">
@@ -82,7 +82,7 @@ const page = () => {
             {alumniData.map((alumni, index) => (
               <div key={index} className="alumni_card">
                 <div className="alumni_image">
-                  {/* Replace with actual image: <img src={alumni.image} alt={alumni.name} /> */}
+                   <img src={alumni.image} alt={alumni.name} />
                   <div className="placeholder_image"></div>
                 </div>
                 <div className="alumni_info">
