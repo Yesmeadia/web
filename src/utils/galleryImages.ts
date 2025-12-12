@@ -3,15 +3,20 @@ const rawImages = [
 
    "/gallery/ahibba_summit/ahibba_summit.jpg",
    "/gallery/ahibba_summit/ahibba_summit2.jpg",
+   "/gallery/artsFest/arts1.jpg",
    "/gallery/ahibba_summit/ahibba_summit3.jpg",
+   "/gallery/artsFest/arm-1.jpg",
   "/gallery/ahibba_summit/ahibba_summit4.jpg",
    "/gallery/ahibba_summit/ahibba_summit5.jpg",
   "/gallery/ahibba_summit/ahibba_summit6.jpg",
   "/gallery/ahibba_summit/ahibba_summit7.jpg",
   "/gallery/ahibba_summit/ahibba_summit8.jpg",
   "/gallery/ahibba_summit/ahibba_summit9.jpg",
+    "/gallery/artsFest/arts2.jpg",
   "/gallery/ahibba_summit/ahibba_summit10.jpg",
   "/gallery/ahibba_summit/ahibba_summit11.jpg",
+  "/gallery/artsFest/arm-2.jpg",
+  "/gallery/ahibba_1.jpg",
  
 ];
 
