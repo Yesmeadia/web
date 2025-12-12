@@ -118,32 +118,39 @@ const about = () => {
             </p>
 
             <div className="voice_profile">
-              <div className="profile_img"></div>
-              <div className="profile_info">
-                <h5>Prof. Seyd Musarath Hussain Shah</h5>
-                <p>Principal Govt. Degree College Mandi</p>
-              </div>
-            </div>
+                            <div className="profile_img">
+                              <Image
+                                src="/feedback/prof_seyd-1.jpg"
+                                alt="Prof. Seyd Musarath Hussain Shah"
+                                fill
+                                className="profile_image"
+                              />
+                            </div>
+                            <div className="profile_info">
+                              <h5>Prof. Seyd Musarath Hussain Shah</h5>
+                              <p>Principal Govt. Degree College Mandi</p>
+                            </div>
+                          </div>
           </div>
 
           <div className="voice_see_more">
             <div className="avatars">
               <Image
-                src="/feedback/avatar_1.jpg"
+                src="/feedback/prof_seyd-1.jpg"
                 alt="avatar"
                 width={35}
                 height={35}
                 className="avatar"
               />
               <Image
-              src="/feedback/avatar_2.jpg"
+              src="/feedback/dr-shameem1.jpg"
                 alt="avatar"
                 width={35}
                 height={35}
                 className="avatar"
               />
               <Image
-       src="/feedback/avatar_3.jpg"
+       src="/feedback/pir-nisar.jpg"
                 alt="avatar"
                 width={35}
                 height={35}

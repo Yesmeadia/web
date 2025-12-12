@@ -107,7 +107,7 @@ const page = () => {
                 <div className="voice_profile">
                   <div className="profile_img">
                     <Image
-                      src="/feedback/pir-nisar.png"
+                      src="/feedback/pir-nisar.jpg"
                       alt="Pir Nisar Hussain Shah"
                       fill
                       className="profile_image"
