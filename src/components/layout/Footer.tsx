@@ -6,13 +6,14 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname();
   const navLinks = [
-    { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/academic", label: "Academic" },
     { href: "/gallery", label: "Gallery" },
     { href: "/gpp", label: "Yes GPP" },
     { href: "/alumni", label: "Alumni" },
     { href: "/feedback", label: "Feedback" },
+    { href: "/history", label: "History" },
+    { href: "/milestone", label: "Milestone" },
        
   ];
 
@@ -90,7 +91,7 @@ const Footer = () => {
              <ul>
                 <li>
                   {" "}
-                  <Link href={"#"} aria-label="facebook">
+                  <Link href={"https://www.facebook.com/YESINDIAFOUNDATION/"} aria-label="facebook">
                     <svg
                       width="20"
                       height="20"
@@ -107,7 +108,7 @@ const Footer = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link href={"#"} aria-label="instagram">
+                  <Link href={"https://www.instagram.com/yes_india_foundation_/"} aria-label="instagram">
                     <svg
                       width="20"
                       height="20"

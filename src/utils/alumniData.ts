@@ -18,7 +18,7 @@ export const alumniData = [
     image: "alumni/manazer_hussain.jpg"
   },
   {
-    name: "Israt Sultana KAS",
+    name: "Ishrat Sultana KAS",
     position: "DYSP",
     department: "J & K Police",
     image: "/alumni/Israt_sultana.jpg"
