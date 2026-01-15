@@ -44,43 +44,55 @@ const rawCampuses = [
     location: "YASEEN ENGLISH SCHOOL, ",
     url: "",
   },
+
   {
-    image: "/campus10.jpg",
-    location: "YES Garden Poonch - Jammu & Kashmir",
+    image: "/institutions/institution1.jpg",
+        location: "YES.PA INAMDAR AHMEDNAGAR - MAHARASHTRA",
     url: "",
   },
-  {
-    image: "/campus11.jpg",
-    location: "YES Harni - Jammu & Kashmir",
+    {
+    image: "/institutions/institution2.png",
+        location: "YESUQ Hs Mongam - Kerala ",
+    url: "",
   },
-  {
-    image: "/campus12.jpg",
-    location: "YES Serikhawaja - Jammu & Kashmir",
-  },
+  // {
+  //   image: "/campus10.jpg",
+  //   location: "YES Garden Poonch - Jammu & Kashmir",
+  //   url: "",
+  // },
+  // {
+  //   image: "",
+  //   location: "YES Harni - Jammu & Kashmir",
+  // },
+  // {
+  //   image: "/campus12.jpg",
+  //   location: "YES Serikhawaja - Jammu & Kashmir",
+  // },
   {
     image: "/institutions/narbalBudgamJ&K.jpg",
     location: "YES Narbal, Budgam - Jammu & kashmir",
   },
-  {
-    image: "/campus14.jpg",
-    location: "YES Traranwali, Poonch - Jammu & Kashmir",
-  },
-  {
-    image: "/campus15.jpg",
-    location: "YES Maloora, Srinagar - Jammu & Kashmir",
-  },
-  {
-    image: "/campus16.jpg",
-    location: "EC YES Star Poonch - Jammu & Kashmir",
-  },
-  {
-    image: "/campus17.jpg",
-    location: "YES CIS Dhundak - Jammu & Kashmir",
-  },
-  {
-    image: "/campus18.jpg",
-    location: "YES Chaktroo, Poonch - Jammu & Kashmir",
-  },
+  // {
+  //   image: "",
+  //   location: "YES Traranwali, Poonch - Jammu & Kashmir",
+  // },
+  // {
+  //   image: "/campus15.jpg",
+  //   location: "YES Maloora, Srinagar - Jammu & Kashmir",
+  // },
+
+  // {
+  //   image: "",
+  //   location: "EC YES Star Poonch - Jammu & Kashmir",
+  // },
+  // {
+  //   image: "",
+  //   location: "YES CIS Dhundak - Jammu & Kashmir",
+  // },
+  // {
+  //   image: "",
+  //   location: "YES Chaktroo, Poonch - Jammu & Kashmir",
+  // },
   //////////////////////////
   // {
   //   image: "/institutions/RUIHSS PARADE CAMPUS",

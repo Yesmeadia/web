@@ -136,11 +136,12 @@ const Contact = () => {
             {({ isSubmitting, values, errors, touched }) => (
               <Form className="contact_form">
                 {/* NAME FIELD */}
-                <div>
+                <div className="input_container">
                   <Field
                     type="text"
                     name="name"
                     placeholder="Name"
+          
                     maxLength={20}
                     className={errors.name && touched.name ? "input_error" : ""}
                   />
@@ -206,30 +207,34 @@ const Contact = () => {
       </section>
 
       {/* LOCATIONS SECTION */}
-      <section className="wrapper_section">
-        <div className="map_locations_container">
-          {locations.map((location, index) => (
-            <div key={index} className="map_bg_wrapper">
-              <div className="map_background">
-                <Image
-                  src="/map_bg.png"
-                  width={600}
-                  height={440}
-                  alt="Background Map"
-                  priority
-                />
-              </div>
-              <div className="location_details">
-                <h6>{location.title}</h6>
-                <div className="location_address">
-                  <p>{location.address}</p>
-                  <p>{location.city}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+<section className="wrapper_section">
+  <div className="map_locations_container">
+    {locations.map((location, index) => (
+      <div key={index} className="map_bg_wrapper">
+        <div className="map_background">
+          <Image
+            src="/map_bg.png"
+            width={600}
+            height={440}
+            alt="Background Map"
+            priority
+          />
         </div>
-      </section>
+        <div className="location_details">
+          {/* Header Bar */}
+          <div className="location_header">
+            <h6>{location.title}</h6>
+          </div>
+          {/* Address Content */}
+          <div className="location_address">
+            <p>{location.address}</p>
+            <p>{location.city}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
     </>
   );
 };
