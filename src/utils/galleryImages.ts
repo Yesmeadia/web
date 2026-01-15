@@ -1,23 +1,56 @@
 // utils/galleryImages.ts
 const rawImages = [
+"/arts/art_img1.jpg",
+"/arts/art_img2.jpg",
+"/arts/art_img3.jpg",
+"/arts/art_img4.jpg",
+"/arts/art_img5.jpg",
+"/arts/art_img6.jpg",
+"/arts/art_img7.jpg",
+"/arts/art_img8.jpg",
+"/arts/art_img9.JPEG",
+"/arts/art_img10.jpg",
+
+
+  "/gallery/army_gust1.jpg",
+"/gallery/army_gust2.jpg",
+"/gallery/army_gust3.jpg",
+"/gallery/army_gust4.jpg",
+"/gallery/army_gust5.jpg",
+"/gallery/army_gust6.jpg",
+"/gallery/army_gust7.jpg",
 
    "/gallery/ahibba_summit/ahibba_summit.jpg",
    "/gallery/ahibba_summit/ahibba_summit2.jpg",
-   "/gallery/artsFest/arts1.jpg",
    "/gallery/ahibba_summit/ahibba_summit3.jpg",
-   "/gallery/artsFest/arm-1.jpg",
   "/gallery/ahibba_summit/ahibba_summit4.jpg",
    "/gallery/ahibba_summit/ahibba_summit5.jpg",
   "/gallery/ahibba_summit/ahibba_summit6.jpg",
   "/gallery/ahibba_summit/ahibba_summit7.jpg",
   "/gallery/ahibba_summit/ahibba_summit8.jpg",
   "/gallery/ahibba_summit/ahibba_summit9.jpg",
-    "/gallery/artsFest/arts2.jpg",
   "/gallery/ahibba_summit/ahibba_summit10.jpg",
   "/gallery/ahibba_summit/ahibba_summit11.jpg",
-  "/gallery/artsFest/arm-2.jpg",
-  "/gallery/ahibba_1.jpg",
- 
+
+  "/independence/independence1.jpg",
+  "/independence/independence2.jpg",
+  "/independence/independence3.jpg",
+  "/independence/independence4.jpg",
+  "/independence/independence5.jpg",
+    "/independence/independence6.jpg",
+
+    "/sports/sports_img1.jpg",
+    "/sports/sports_img2.jpg",
+    "/sports/sports_img3.png",
+    "/sports/sports_img4.jpg",
+      "/sports/sports_img5.jpg",
+    "/sports/sports_img6.jpg",
+      "/sports/sports_img7.jpg",
+ "/gallery/gallery_img1.png",
+ "/gallery/gallery_img2.jpg",
+ "/gallery/gallery_img3.jpg",
+ "/gallery/gallery_img4.jpg",
+ "/gallery/gallery_img5.jpg",
 ];
 
 // Automatically generate id + alt text

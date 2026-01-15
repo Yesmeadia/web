@@ -17,6 +17,8 @@ const Footer = () => {
        
   ];
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer_container">
@@ -190,7 +192,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="footer_copyright">
-          <p>© 2025 Yes India Foundation, All rights Reserved.</p>
+          <p>© {currentYear} Yes India Foundation, All rights Reserved.</p>
         </div>
       </div>
     </footer>

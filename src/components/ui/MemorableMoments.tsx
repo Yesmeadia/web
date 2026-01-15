@@ -5,7 +5,7 @@ import "./MemorableMoments.scss";
 
 const memorableMoments = [
   { title: "First Day at School", image: "/academic/memorable_moment1.png" },
-  { title: "Parents Training", image: "/academic/memorable_moment2.png" },
+  // { title: "Parents Training", image: "/academic/memorable_moment2.png" },
   { title: "Teachers Training", image: "/academic/memorable_moment3.png" },
   { title: "Management Training", image: "/academic/memorable_moment4.png" },
   { title: "Alumni Training", image: "/academic/memorable_moment5.png" },

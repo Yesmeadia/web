@@ -1,147 +1,118 @@
 .gallery_section {
+height: 100dvh;
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 1.5rem;
+  padding: 4rem 0;
+  overflow: hidden; // Critical to stop mobile "shaking"
+  width: 100%;
+
+
 
   .gallery_wrapper {
-    position: relative;
     width: 100%;
-    max-width: 1200px;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 1rem;
   }
 
-  /* Swiper Core */
   .premium_swiper {
-    width: 100%;
-    overflow: visible;
 
+    overflow: visible; // Allows non-active slides to show on edges
+    
     .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
+      transition: all 0.5s ease;
 
-    .swiper-slide-active {
-      transform: scale(1.1);
-      z-index: 10;
-      filter: brightness(1);
-    }
 
-    .swiper-slide-prev,
-    .swiper-slide-next {
-      filter: brightness(0.8) blur(0.3px);
+
+      &-active {
+        opacity: 1;
+        transform: scale(1.1);
+        z-index: 2;
+      }
     }
   }
 
-  /* Image Styling */
   .gallery_slide {
-    position: relative;
+    width: 100%;
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    }
-
-    .gallery_image {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    // Maintain a consistent aspect ratio
+    .image_container {
+      position: relative;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 24px;
-      transition: transform 0.6s ease;
+      aspect-ratio: 3 / 4; 
+      
+      .gallery_image {
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
     }
 
     &:hover .gallery_image {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
   }
 
-  /* Custom Navigation Buttons */
-  .nav_btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(200, 200, 200, 0.4);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #1b1b1b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    z-index: 20;
-    cursor: pointer;
-
-    &:hover {
-      background: #1b1b1b;
-      color: #fff;
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  /* Bottom Navigation */
   .gallery_bottom_nav {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1.5rem;
-    margin-top: 2rem;
+    // margin-top: 3rem;
 
     .bottom_nav_btn {
-      background: transparent;
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
+
+      background: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
       cursor: pointer;
+      transition: all 0.3s ease;
+      color: #333;
 
       &:hover {
-        background: var(--YES-Blue, #2a1b63);
-        color: #fff;
-        transform: scale(1.1);
+        background: #2a1b63; // Your YES-Blue
+        color: white;
+        border-color: #2a1b63;
       }
-
-      &.active {
-        background: var(--YES-Blue, #2a1b63);
-        color: #fff;
+      
+      // Handle Swiper disabled state
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
       }
     }
   }
+}
 
-  /* Custom Pagination */
-  .custom-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 2rem;
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .gallery_section {
+height: 100dvh; // Force full height on mobile
+    // padding: 1rem 0;
 
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background: rgba(0, 0, 0, 0.2);
-      opacity: 1;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-
-      &-active {
-        width: 28px;
-        border-radius: 12px;
-        background: #1b1b1b;
+    .gallery_slide {
+      max-width: 85vw; // Allow image to be wider on mobile
+      
+      .image_container {
+        height: 60dvh; // Adjust this value to control top/bottom spacing
+      }
+    }
+    .premium_swiper {
+      // padding: 2rem 0;
+      .swiper-slide-active {
+        transform: scale(1.05); // Less extreme scaling on mobile
+      }
+    }
+    
+    .gallery_bottom_nav {
+      // margin-top: 1.5rem;
+      .bottom_nav_btn {
+        width: 44px;
+        height: 44px;
       }
     }
   }
@@ -149,10 +120,9 @@
 /* ============================================
    Responsive Adjustments (Keep Desktop Same)
 ============================================ */
-
 @media (max-width: 1080px) {
   .gallery_section {
-    padding: 3rem 1rem;
+
 
     .premium_swiper {
       .swiper-slide {
@@ -183,7 +153,7 @@
 
 @media (max-width: 768px) {
   .gallery_section {
-    padding: 2rem 0.8rem;
+
     min-height: auto;
 
     .gallery_wrapper {
@@ -239,7 +209,7 @@
 
 @media (max-width: 480px) {
   .gallery_section {
-    padding: 1.5rem 0.5rem;
+
 
     .gallery_slide {
       max-width: 280px;
@@ -262,134 +232,290 @@
 }
 
 
+
 // ======================================
 // Main Container
 // ======================================
-.collage-container {
-  display: grid;
-  // Desktop Layout
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 400px;
-  gap: 16px;
-  padding: 0 60px;
-  position: relative;
-  z-index: 0;
+// GalleryGrid.scss
 
-  // Tablet (max-width: 1024px)
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 300px; // Reduced height for tablet
-    gap: 12px;
-    padding: 0 30px;
+
+// .collage-container {
+//   display: grid;
+//   // Desktop Layout
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-auto-rows: 400px;
+//   gap: 16px;
+//   padding: 0 60px;
+//   position: relative;
+//   z-index: 0;
+
+//   // Tablet (max-width: 1024px)
+//   @media (max-width: 1024px) {
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-auto-rows: 300px; // Reduced height for tablet
+//     gap: 12px;
+//     padding: 0 30px;
+//   }
+
+//   // Mobile (max-width: 600px)
+//   @media (max-width: 600px) {
+//     grid-template-columns: repeat(2, 1fr); //  Forces 2 items per row
+//     grid-auto-rows: 220px; //  Premium portrait height for mobile
+//     gap: 10px;
+//     padding: 0px;
+//   }
+// }
+
+// // ======================================
+// // Photo Items - Base Styles
+// // ======================================
+// .photo-item {
+// position: relative;
+//   overflow: hidden;
+//   border-radius: 12px;
+//   background-color: #f0f0f0; // This is your skeleton color
+
+//   // Ensure the container always has a background until the image covers it
+//   &::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     inset: 0;
+//     background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+//     background-size: 200% 100%;
+//     animation: shimmer 1.5s infinite;
+//     z-index: 1;
+//   }
+
+//   .photo {
+//     object-fit: cover;
+//     z-index: 2; // Sits above the shimmer
+//     opacity: 0;
+//     transition: opacity 0.5s ease-in-out;
+//   }
+
+//   // Next.js automatically adds this class when loading is done
+//   img.photo {
+//     opacity: 1;
+//   }
+
+//   // Desktop Hover Effects
+//   @media (hover: hover) {
+//     &:hover {
+//       transform: translateY(-4px);
+//       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+//       z-index: 2;
+
+//       .photo {
+//         transform: scale(1.05);
+//       }
+//     }
+//   }
+
+//   &.loading {
+//     background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+//     background-size: 200% 100%;
+//     animation: shimmer 1.5s infinite;
+//   }
+// }
+
+// // ======================================
+// // Desktop Grid Mapping (Do Not Change)
+// // ======================================
+
+// // Only apply these spans on screens larger than 1024px
+// @media (min-width: 1025px) {
+//   // Row 1
+//   .item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+//   .item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+//   .item-3 { grid-column: 3 / 5; grid-row: 1 / 2; } // spans 2 columns
+
+//   // Row 2
+//   .item-4 { grid-column: 1 / 2; grid-row: 2 / 3; }
+//   .item-5 { grid-column: 2 / 4; grid-row: 2 / 3; } // spans 2 columns
+//   .item-6 { grid-column: 4 / 5; grid-row: 2 / 3; }
+
+//   // Row 3
+//   .item-7 { grid-column: 1 / 2; grid-row: 3 / 4; }
+//   .item-8 { grid-column: 2 / 4; grid-row: 3 / 4; } // spans 2 columns
+//   .item-9 { grid-column: 4 / 5; grid-row: 3 / 4; }
+
+//   // Row 4
+//   .item-10 { grid-column: 1 / 2; grid-row: 4 / 5; }
+//   .item-11 { grid-column: 2 / 3; grid-row: 4 / 5; }
+//   .item-12 { grid-column: 3 / 5; grid-row: 4 / 5; } // spans 2 columns
+// }
+
+// // ======================================
+// // Responsive Overrides (Mobile & Tablet)
+// // ======================================
+// @media (max-width: 1024px) {
+//   .photo-item {
+//     // Reset specific grid positioning so they flow naturally into the 2 columns
+//     grid-column: auto !important;
+//     grid-row: auto !important;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+// // ======================================
+// // Animations
+// // ======================================
+// @keyframes shimmer {
+//   0% { background-position: 200% 0; }
+//   100% { background-position: -200% 0; }
+// }
+
+// .photo {
+//   opacity: 0;
+//   animation: fadeIn 0.8s ease forwards;
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     transform: scale(1.02);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
+
+// @keyframes shimmer {
+//   0% { background-position: 200% 0; }
+//   100% { background-position: -200% 0; }
+// }
+
+
+
+
+.masonry-container {
+  // The magic for Masonry
+  column-count: 4;
+  column-gap: 20px;
+  width: 100%;
+@media (max-width: 1100px) { 
+    column-count: 3; 
+    column-gap: 20px;
   }
 
-  // Mobile (max-width: 600px)
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr); //  Forces 2 items per row
-    grid-auto-rows: 220px; //  Premium portrait height for mobile
-    gap: 10px;
-    padding: 0px;
+  @media (max-width: 800px) { 
+    column-count: 2; 
+    column-gap: 16px;
+  }
+
+  @media (max-width: 500px) { 
+    column-count: 2; // Fixed to 2 columns as requested
+    column-gap: 12px; // Slightly tighter gap for mobile screens
   }
 }
 
-// ======================================
-// Photo Items - Base Styles
-// ======================================
-.photo-item {
-  position: relative;
+.masonry-item {
+break-inside: avoid;
+  margin-bottom: 24px; // Vertical spacing
+  border-radius: 12px; // Slightly smaller radius for mobile precision
   overflow: hidden;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f0f0f0; // Fallback color while loading
+  position: relative;
+  background: #f8f8f8;
 
-  .photo {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Smoother premium ease
+  @media (max-width: 500px) {
+    margin-bottom: 12px; // Match horizontal gap
+    border-radius: 8px;  // Sharper corners look "pro" on small screens
+  }
+  
+
+  .image-wrapper {
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto; // Let the image dictate its height
+      object-fit: cover;
+      transition: filter 0.4s ease;
+    }
+
+
   }
 
-  // Desktop Hover Effects
-  @media (hover: hover) {
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-      z-index: 2;
-
+  &:hover {
+    .image-wrapper {
+      transform: scale(1.02);
+      
       .photo {
-        transform: scale(1.05);
+        filter: brightness(1.1);
       }
+
     }
   }
+}
 
-  &.loading {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.view-more-btn {
+  position: relative;
+  padding: 14px 40px;
+  background: #2a1b63;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    // background: #222;
+    transform: translateY(-2px);
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: #444;
   }
 }
 
-// ======================================
-// Desktop Grid Mapping (Do Not Change)
-// ======================================
-
-// Only apply these spans on screens larger than 1024px
-@media (min-width: 1025px) {
-  // Row 1
-  .item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
-  .item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
-  .item-3 { grid-column: 3 / 5; grid-row: 1 / 2; } // spans 2 columns
-
-  // Row 2
-  .item-4 { grid-column: 1 / 2; grid-row: 2 / 3; }
-  .item-5 { grid-column: 2 / 4; grid-row: 2 / 3; } // spans 2 columns
-  .item-6 { grid-column: 4 / 5; grid-row: 2 / 3; }
-
-  // Row 3
-  .item-7 { grid-column: 1 / 2; grid-row: 3 / 4; }
-  .item-8 { grid-column: 2 / 4; grid-row: 3 / 4; } // spans 2 columns
-  .item-9 { grid-column: 4 / 5; grid-row: 3 / 4; }
-
-  // Row 4
-  .item-10 { grid-column: 1 / 2; grid-row: 4 / 5; }
-  .item-11 { grid-column: 2 / 3; grid-row: 4 / 5; }
-  .item-12 { grid-column: 3 / 5; grid-row: 4 / 5; } // spans 2 columns
+// The Spinner
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-// ======================================
-// Responsive Overrides (Mobile & Tablet)
-// ======================================
-@media (max-width: 1024px) {
-  .photo-item {
-    // 🟢 Reset specific grid positioning so they flow naturally into the 2 columns
-    grid-column: auto !important;
-    grid-row: auto !important;
-    width: 100%;
-    height: 100%;
-  }
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
-// ======================================
-// Animations
-// ======================================
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.photo {
+// Entrance Animation for Images
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
   opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeUp {
   from {
     opacity: 0;
-    transform: scale(1.02);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }

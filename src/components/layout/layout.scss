@@ -191,63 +191,148 @@
 // FounderMessage.tsx--------------------------------------------------->
 
 //ExploreTeam.tsx---------------------------------------------------->
-.explore_team_container {
-  margin-top: 60px;
+.explore_team_section {
+margin-bottom: 40px 0;
 
-  @media (max-width: 768px) {
-    display: none;
+
+  .explore_container {
+  max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    margin-bottom: 40px;
+    // padding: 0 24px;
+
+    @media (max-width:768px) {
+      padding:0px 16px;
+    }
   }
-  .explore_team_contents_wrapper {
-    // height: 468px;
-    display: flex;
-    gap: 81px;
-    // align-items: center;
-    padding: 48px 55px;
+
+  .content_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 48px;
+    align-items: end;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  .text_block {
+    .subtitle {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color:var(--primary-color);
+    }
 
     p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #4a4a4a;
       text-align: justify;
-      font-size: 20px;
+    }
+
+    &.secondary p {
+      font-size: 16px; 
+   border-left: 3px solid var(--primary-color);
+      padding-left: 20px;
+      
     }
   }
 
-  .explore_team_img_wrapper {
+  .image_hero_wrapper {
     position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 540px;
 
-    .explore_btn {
+    @media (max-width: 768px) {
+      height: 350px;
+    }
+
+.image_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  .team_image {
+    // Change 'contain' to 'cover' to fill the container
+    object-fit: cover; 
+    // This ensures the image is always centered horizontally and vertically
+    object-position: center; 
+    
+    // Maintain your existing transition
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+    
+    // Ensure the image fills the parent container dimensions
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+    &:hover .team_image {
+      transform: scale(1.03);
+    }
+
+    .glass_cta {
       position: absolute;
-    bottom: 2%;
-    right:0px;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 48px;
+      cursor: pointer;
+      border: none;
+      
+      // Premium Glassmorphism
+      background: rgba(42, 27, 99, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom-right-radius: 30px;
+      color: #FFFFFF;
+      transition: all 0.3s ease;
 
-      button {
-        display: flex;
-        align-items: center;
-        gap: 13px;
+      span {
+        font-size: 18px;
+        font-weight: 400;
+        color: #FFFFFF;
+      }
 
-        border: none;
-        background-color: var(--primary-color);
-        border-bottom-right-radius: 30px;
-        padding: 20px 30px;
+      svg {
+        transition: transform 0.3s ease;
+      }
 
-          /*  Glassy indigo background */
-      background: linear-gradient(
-        135deg,
-        rgba(42, 27, 99, 0.7),
-        rgba(42, 27, 99, 0.4)
-      );
-      backdrop-filter: blur(14px) saturate(180%);
-      -webkit-backdrop-filter: blur(14px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.15);
- box-shadow: 0 4px 12px rgba(42, 27, 99, 0.4);
-        p {
-          color: var(--heading-color);
+      &:hover {
+        background: rgba(42, 27, 99, 0.9);
+        padding-right: 60px;
+        
+        svg {
+          transform: translateX(8px);
         }
       }
+
+      @media (max-width: 480px) {
+        width: 100%;
+        border-radius: 0;
+        justify-content: center;
+        padding: 20px;
+      }
     }
-  }
-  .explore_team_img_wrapper img {
-    width: 100%;
-    object-fit: contain;
-    position: relative;
   }
 }
 
@@ -420,7 +505,6 @@ font-size: 60px;
   .institution_image_wrapper {
     height: 280px;
     width: 100%;
-    background-color: blue;
     position: relative;
     border-radius: 10px;
     overflow: hidden;

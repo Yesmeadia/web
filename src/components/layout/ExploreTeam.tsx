@@ -8,58 +8,59 @@ const ExploreTeam = () => {
   const router = useRouter();
 
   const handleNavigate = () => {
-    router.push("/alumni")
-  }
+    router.push("/alumni");
+  };
+
   return (
-    <div className="wrapper_section">
-      <div className="explore_team_container">
-        <div className="explore_team_contents_wrapper">
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "47px" }}
-          >
+    <section className="explore_team_section">
+      <div className="explore_container">
+        <div className="content_grid">
+          <div className="text_block">
+            {/* <span className="subtitle">Our Organization</span> */}
             <h2>The Team is Here</h2>
             <p>
-              In this nationwide educational network, all of them are working as
-              a single team but in a hierarchy - serving in different posts like
-              Directors, Regional / Zonal Managers, Heads of Departments, Zonal
-              Co Ordinators, Principals, Teachers and so on. All these positions
-              are only for the smooth functioning of the system. Inside the team
-              everyone knows each other by their position, but externally we all
-              are only family
+              In this nationwide educational network, we function as a single 
+              cohesive unit within a structured hierarchy—serving as Directors, 
+              Managers, and Educators. These positions exist to ensure the 
+              seamless operation of our mission. Internally, we respect our 
+              professional roles; externally, we are a family.
             </p>
           </div>
-          <div>
-         <p>
-  members; individually known as &apos;Yesian&apos; and collectively &apos;YES
-  Team&apos; captained by a visionary ardent Founder Mr. Shaukath
-  Bukhari. <br /> Actually, total team members are 875. Among them, some
-  faces are introduced here specially, considering their sacrifice
-  to work out of their birth state to ensure their service
-  around-the-clock. They are ordered here based on the seniority in
-  joining the mission; No position is mentioned with the names.
-  Let&apos;s have a look at them.
-</p>
+          <div className="text_block secondary">
+            <p>
+              Our members, known individually as <strong>'Yesian'</strong> and 
+              collectively as the <strong>'YES Team'</strong>, are led by our 
+              visionary founder, <strong>Mr. Shaukath Bukhari</strong>. 
+              Out of our 875 members, we highlight those who have 
+              sacrificed by working away from their home states to provide 
+              round-the-clock service.
+            </p>
           </div>
         </div>
-        <div className="explore_team_img_wrapper">
-          <Image
-            src="/team_photo.png"
-            alt="team-photo"
-            width={1200}
-            height={540}
-            priority
-          />
-        <div className="explore_btn">
-          <button onClick={handleNavigate}><p>Explore Our Team</p> <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26 12L1.5 12M26 12L15.5 22.5M26 12L15.5 1.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-</button>
-        </div>
-        </div>
 
-
+        <div className="image_hero_wrapper">
+          <div className="image_container">
+            <Image
+              src="/team_photo.png"
+              alt="YES Team group photo"
+         width={1400} 
+      height={600}
+      className="team_image"
+      priority
+      // This helps Next.js serve the right size to mobile vs desktop
+      sizes="(max-width: 768px) 100vw, 1400px"
+            />
+          </div>
+          
+          <button className="glass_cta" onClick={handleNavigate}>
+            <span>Explore Our Team</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
