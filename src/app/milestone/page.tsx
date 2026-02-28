@@ -39,7 +39,7 @@ const MilestonePage = () => {
 
         <div className="container hero_inner">
           <div className="hero_content">
-  
+
             <h1>
               Milestones of <br />
               Institutional Excellence
@@ -90,7 +90,7 @@ const MilestonePage = () => {
         <div className="container">
           <div className="grid_layout">
             <div className="image_box main_img">
-              <img src="/awards/award_img1.jpg" alt="Graduation Ceremony" />
+              <img src="/awards/award_img1.jpeg" alt="Graduation Ceremony" />
               <div className="overlay_text">National Reach</div>
             </div>
             <div className="content_box">

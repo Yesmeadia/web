@@ -1,66 +1,75 @@
 import AlumniLogin from "@/components/templates/AlumniLogin";
 import { alumniData } from "@/utils/alumniData";
 import React from "react";
+import Image from "next/image";
 
 const page = () => {
 
   return (
-    <>  
+    <>
       <section className="wrapper_section">
         <div className="alumni_banner_section">
+          <Image
+            src="/states_banner_bg.png"
+            alt="alumni_banner"
+            width={1222}
+            height={687}
+            priority
+            className="alumni_banner_image"
+          />
           <div className="alumni_banner_contents">
             <h1>
               Tailored Careers: <br />
               YES India Alumni
             </h1>
             <div className="button_contanier">
-              <a style={{textDecoration:"none"}} href="#alumni-grid">
-  <button>
-                {" "}
-                <span>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <mask
-                      id="mask0_821_1286"
-                      style={{ maskType: "luminance" }}
-                      maskUnits="userSpaceOnUse"
-                      x="0"
-                      y="0"
+              <a style={{ textDecoration: "none" }} href="#alumni-grid">
+                <button>
+                  {" "}
+                  <span>
+                    <svg
                       width="18"
                       height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        d="M1.00033 8.99935C1.00033 13.4174 4.58164 16.9987 8.99968 16.9987C13.4177 16.9987 16.999 13.4174 16.999 8.99935C16.999 4.58131 13.4177 1 8.99968 1C4.58164 0.999999 1.00033 4.58131 1.00033 8.99935Z"
-                        fill="white"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M5.4002 7.80078L8.9999 11.4005L12.5996 7.80078"
-                        stroke="black"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </mask>
-                    <g mask="url(#mask0_821_1286)">
-                      <path
-                        d="M-2.99707 -1.66602H20.9984V19.6633H-2.99707V-1.66602Z"
-                        fill="white"
-                      />
-                    </g>
-                  </svg>
-                </span>{" "}
-                <p>Explore</p>
-              </button>
+                      <mask
+                        id="mask0_821_1286"
+                        style={{ maskType: "luminance" }}
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="18"
+                        height="18"
+                      >
+                        <path
+                          d="M1.00033 8.99935C1.00033 13.4174 4.58164 16.9987 8.99968 16.9987C13.4177 16.9987 16.999 13.4174 16.999 8.99935C16.999 4.58131 13.4177 1 8.99968 1C4.58164 0.999999 1.00033 4.58131 1.00033 8.99935Z"
+                          fill="white"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M5.4002 7.80078L8.9999 11.4005L12.5996 7.80078"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </mask>
+                      <g mask="url(#mask0_821_1286)">
+                        <path
+                          d="M-2.99707 -1.66602H20.9984V19.6633H-2.99707V-1.66602Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                  </span>{" "}
+                  <p>Explore</p>
+                </button>
               </a>
-            
+
             </div>
             <p>
               The true measure of success for <span>YES India Foundation</span>{" "}
@@ -82,7 +91,7 @@ const page = () => {
             {alumniData.map((alumni, index) => (
               <div key={index} className="alumni_card">
                 <div className="alumni_image">
-                   <img src={alumni.image} alt={alumni.name} />
+                  <img src={alumni.image} alt={alumni.name} />
                   <div className="placeholder_image"></div>
                 </div>
                 <div className="alumni_info">
@@ -120,7 +129,7 @@ const page = () => {
             </p>
           </div>
 
-  <div className="state_ranks_side">
+          <div className="state_ranks_side">
             <h2>State Level Ranks</h2>
             <div className="ranks_grid">
               <div className="rank_card">

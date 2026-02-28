@@ -34,61 +34,59 @@ import { useEffect, useState } from "react";
 const HomeBanner = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     handleResize(); // Initial check
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const desktopBanners  = [
+  const desktopBanners = [
     {
       image: "/home_bg_banner1.png",
       text: "Empowering the Next Generation Through Knowledge",
-    },
-        {
-      image: "/home_bg_banner2.jpg",
-      text: "A Child Without Education is Like a Bird Without Wings",
-    },
-    // {
-    //   image: "/home_bg_banner3.jpg",
-    //   text: "Education Opens the Door to Freedom and Opportunity",
-    // },
-       {
-      image: "/home_bg_banner3.jpg",
-      text: "Education Opens the Door to Freedom and Opportunity",
+      textColor: "#f8f1e7", // Light beige for dark auditorium
     },
     {
-      image: "/home_bg_banner4.jpg",
-      text: "Building Brighter Futures, One Child at a Time",
+      image: "/home_bg_banner5.png",
+      text: "A Child Without Education is Like a Bird Without Wings",
+      textColor: "#A5874C", // Pure white for purple background
     },
-
-
-     
+    {
+      image: "/home_bg_banner3.jpg",
+      text: "Education Opens the Door to Freedom and Opportunity",
+      textColor: "#ffffff",
+    },
+    {
+      image: "/home_bg_banner6.png",
+    },
   ];
 
   const mobileBanners = [
-      {
+    {
       image: "/home_bg_banner1.png",
       text: "Empowering the Next Generation Through Knowledge",
+      textColor: "#f8f1e7",
     },
-
     {
-      image: "/home_bg_banner2.jpg",
+      image: "/home_bg_banner5.png",
       text: "Empowering the Next Generation Through Knowledge",
+      textColor: "#ffffff",
     },
-        {
+    {
       image: "/home_bg_banner3.jpg",
       text: "Education Opens the Door to Freedom and Opportunity",
+      textColor: "#ffffff",
     },
-        {
-      image: "/home_bg_banner4.jpg",
+    {
+      image: "/home_bg_banner6.png",
       text: "Building Brighter Futures, One Child at a Time",
+      textColor: "#2a1b63",
     },
   ];
 
 
-   const banners = isMobile ? mobileBanners : desktopBanners;
+  const banners = isMobile ? mobileBanners : desktopBanners;
 
   return (
     <div className="home_banner">
@@ -115,7 +113,7 @@ const HomeBanner = () => {
         loop
         className="home_banner_content"
       >
-           {banners.map((banner, index) => (
+        {banners.map((banner, index) => (
           <SwiperSlide key={index}>
             <div className="banner_slide">
               <Image
@@ -125,7 +123,7 @@ const HomeBanner = () => {
                 height={isMobile ? 750 : 750}
                 priority
               />
-              <h1>{banner.text}</h1>
+              <h1 style={{ color: banner.textColor }}>{banner.text}</h1>
             </div>
           </SwiperSlide>
         ))}

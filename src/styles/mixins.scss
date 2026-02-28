@@ -47,6 +47,7 @@
             color: #ffffff;
           }
         }
+
         .nav_link::after {
           content: "";
           position: absolute;
@@ -62,16 +63,20 @@
             background-color: #ffffff;
           }
         }
+
         .nav_link:hover::after {
           width: 100%;
         }
+
         .nav_link.active {
           color: #2a1b63;
           font-weight: 500;
+
           @media (max-width: 1080px) {
             color: #ffffff;
           }
         }
+
         .nav_link.active::after {
           width: 100%;
         }
@@ -81,6 +86,7 @@
 
   .button_container {
     margin-left: 80px;
+
     button {
       background-color: #2a1b63;
       color: #ffffff;
@@ -101,15 +107,15 @@
       top: 0;
       right: -100%;
       // Use 100vh for full height premium feel
-      height: 100vh; 
+      height: 100vh;
       // Ensure min-width for readability on small screens
-      width: 60%; 
+      width: 60%;
       min-width: 280px;
       max-width: 400px;
-      
+
       padding: 80px 40px 40px; // Add top padding to clear the toggle button
       background-color: #2a1b63;
-      box-shadow: -5px 0 25px rgba(0,0,0,0.2); // Add depth
+      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2); // Add depth
       flex-direction: column;
       justify-content: flex-start; // Align top
       align-items: flex-start; // Align left text
@@ -134,7 +140,7 @@
       .mobile_contact_li {
         display: block;
         margin-top: 20px;
-        
+
         .mobile_contact_btn {
           width: 100%;
           background-color: #ffffff;
@@ -146,7 +152,7 @@
           font-size: 16px;
           cursor: pointer;
           transition: transform 0.2s;
-          
+
           &:active {
             transform: scale(0.98);
           }
@@ -178,75 +184,75 @@
     }
 
     /* --- Premium Toggle Button (Hamburger to X) --- */
-/* --- Premium Toggle Button (SVG Version) --- */
-.mobile_toggle {
-  z-index: 100;
-  cursor: pointer;
-  // width: 48px; // Touch target size
-  // height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  // Wrapper to hold absolute positioned SVGs relative to center
-  .icon_wrapper {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    
-    .svg_icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      // Smooth premium transition
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-    }
+    /* --- Premium Toggle Button (SVG Version) --- */
+    .mobile_toggle {
+      z-index: 100;
+      cursor: pointer;
+      // width: 48px; // Touch target size
+      // height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    /* --- Default State (Menu Closed) --- */
-    .hamburger {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
+      // Wrapper to hold absolute positioned SVGs relative to center
+      .icon_wrapper {
+        position: relative;
+        width: 24px;
+        height: 24px;
 
-    .close {
-      opacity: 0;
-      // Start slightly rotated and smaller for the "pop in" effect
-      transform: scale(0.5) rotate(-90deg);
-    }
-  }
+        .svg_icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          // Smooth premium transition
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        }
 
-  /* --- Active State (Menu Open) --- */
-  &.active {
-    .icon_wrapper {
-      .hamburger {
-        opacity: 0;
-        // Rotate out and shrink
-        transform: scale(0.5) rotate(90deg);
+        /* --- Default State (Menu Closed) --- */
+        .hamburger {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+
+        .close {
+          opacity: 0;
+          // Start slightly rotated and smaller for the "pop in" effect
+          transform: scale(0.5) rotate(-90deg);
+        }
       }
 
-      .close {
-        opacity: 1;
-        // Rotate in to neutral
-        transform: scale(1) rotate(0deg);
+      /* --- Active State (Menu Open) --- */
+      &.active {
+        .icon_wrapper {
+          .hamburger {
+            opacity: 0;
+            // Rotate out and shrink
+            transform: scale(0.5) rotate(90deg);
+          }
+
+          .close {
+            opacity: 1;
+            // Rotate in to neutral
+            transform: scale(1) rotate(0deg);
+          }
+        }
       }
     }
   }
 }
+
+.home_page {
+  @media (max-width:768px) {
+    padding: 20px 0px;
   }
 }
 
-.home_page{
- @media (max-width:768px) {
-  padding: 20px 0px;
- }
-}
-
- .home_banner {
+.home_banner {
   position: relative;
   height: calc(100dvh - 78px);
-      padding: 40px 48px 0px 48px;
+  padding: 40px 48px 0px 48px;
 
   @media (max-width: 768px) {
     height: 100%;
@@ -262,7 +268,7 @@
 
   .banner_slide {
     position: relative;
-max-width: 1500px;
+    max-width: 1500px;
     height: 650px;
   }
 
@@ -286,7 +292,8 @@ max-width: 1500px;
     top: 50%;
     left: 48px;
     transform: translateY(-50%);
-    color: #fff;
+    // color: #fff;
+    color: inherit;
     z-index: 2;
     max-width: 520px;
 
@@ -301,7 +308,7 @@ max-width: 1500px;
   .banner_nav {
     position: absolute;
     top: 50%;
-color: #ffffff;
+    color: #ffffff;
     transform: translateY(-50%);
     z-index: 3;
     display: flex;
@@ -314,6 +321,7 @@ color: #ffffff;
 
   .prev_btn {
     left: 50px;
+
     @media (max-width:1080px) {
       left: 16px;
     }
@@ -321,14 +329,15 @@ color: #ffffff;
 
   .next_btn {
     right: 50px;
-        @media (max-width:1080px) {
+
+    @media (max-width:1080px) {
       right: 16px;
     }
   }
 
   /* --- Pagination Dots --- */
   .banner_pagination {
-display: none;
+    display: none;
   }
 }
 
@@ -357,9 +366,9 @@ display: none;
   &.visible {
     top: 0;
     opacity: 1;
-      position: relative;
-  top: -80px;
-  z-index: 1;
+    position: relative;
+    top: -80px;
+    z-index: 1;
   }
 
   .count_section {
@@ -406,10 +415,12 @@ display: none;
       h2 {
         font-size: 36px;
         color: var(--heading-color);
+
         @media (max-width:991px) {
-           font-size: 24px;
+          font-size: 24px;
         }
       }
+
       p {
         color: var(--heading-color);
         text-align: justify;

@@ -6,7 +6,7 @@ import { yesInfoCardData } from "@/utils/cardData";
 
 export default function CardGrid() {
   return (
-<div className="wrapper_section">
+    <div className="wrapper_section">
       <div className="card_container">
 
         {yesInfoCardData.map((item, i) => (
@@ -56,7 +56,7 @@ export default function CardGrid() {
           </div>
         ))}
       </div>
-</div>
+    </div>
 
   );
 }

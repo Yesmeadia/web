@@ -5,21 +5,21 @@ export const yesInfoCardData = [{
     title: 'The Inspiring Journey of YES India Foundation',
     backgroundColor: '#ffffffff',
     arrowColor: '#FFFFFF',
- link: '/history',
+    link: '/history',
 },
 {
-     image: '/carousal/card_img2.png',
+    image: '/carousal/card_img2.png',
     title: 'Milestones of Growth: Yearly Progress Since 2007',
     backgroundColor: '#ffffffff',
-   arrowColor: '#FFFFFF',
+    arrowColor: '#FFFFFF',
     link: '/milestone'
 },
 
 {
-     image: '/carousal/card_img3.png',
+    image: '/carousal/card_img3.png',
     title: 'YES India State of Operations: Expanding Horizons',
     backgroundColor: '#ffffffff',
-   arrowColor: '#FFFFFF',
+    arrowColor: '#FFFFFF',
     link: '/states'
 }
 ]
