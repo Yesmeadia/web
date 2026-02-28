@@ -14,7 +14,7 @@ const Footer = () => {
     { href: "/feedback", label: "Feedback" },
     { href: "/history", label: "History" },
     { href: "/milestone", label: "Milestone" },
-       
+
   ];
 
   const currentYear = new Date().getFullYear();
@@ -48,9 +48,8 @@ const Footer = () => {
                 <li key={i}>
                   <Link
                     href={list?.href}
-                    className={`nav_link ${
-                      pathname === list.href ? "active" : ""
-                    }`}
+                    className={`nav_link ${pathname === list.href ? "active" : ""
+                      }`}
                   >
                     {list?.label}
                   </Link>
@@ -64,14 +63,14 @@ const Footer = () => {
             <div>
               <h5>Registered Office</h5>
               <p>
-                RKP - V/720-A12, YES square, <br /> Calicut, Kerala - 673633
+                RKP.V/720-A 12, Hanna Tower, <br /> Opp. BUS Stand Ramanatukara, Kozhikode -673633, Kerala
               </p>
             </div>
 
             <div>
               <h5>Administrative Office</h5>
               <p>
-                A -15, Nizamuddin west, <br /> New Delhi, India - 110013
+                5024, Plot no7, Block-B, <br /> 4th Floor Netaji Subash Marg, Daryaganj Central Delhi, 110002
               </p>
             </div>
           </div>
@@ -90,7 +89,7 @@ const Footer = () => {
 
             <div className="footer-socials">
               <h5>Get In Touch</h5>
-             <ul>
+              <ul>
                 <li>
                   {" "}
                   <Link href={"https://www.facebook.com/YESINDIAFOUNDATION/"} aria-label="facebook">

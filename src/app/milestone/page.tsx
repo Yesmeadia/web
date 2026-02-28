@@ -51,13 +51,13 @@ const MilestonePage = () => {
 
             <div className="hero_stats_wrapper">
               <div className="stat_item">
-                <strong>16K+</strong> <span>Students</span>
+                <strong>17K+</strong> <span>Students</span>
               </div>
               <div className="stat_item">
-                <strong>50+</strong> <span>Centers</span>
+                <strong>60</strong> <span>Institutions</span>
               </div>
               <div className="stat_item">
-                <strong>08+</strong> <span>States</span>
+                <strong>09</strong> <span>States</span>
               </div>
             </div>
           </div>

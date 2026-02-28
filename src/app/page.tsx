@@ -28,7 +28,7 @@ export default async function Home() {
                     />
                   </svg>
                 }
-                count={16000}
+                count={17000}
                 label="Students"
                 showPlus={true}
               />
@@ -74,7 +74,7 @@ export default async function Home() {
                     />
                   </svg>
                 }
-                count={63}
+                count={60}
                 label="Institutions"
                 showPlus={false}
               />
