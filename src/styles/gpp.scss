@@ -259,7 +259,7 @@
   // margin-bottom: 3rem;
 
   .intro_text {
-    max-width: 900px;
+    max-width: 100%;
     text-align: justify;
     color: var(--paragraph-color);
 
@@ -270,7 +270,7 @@
 .buds_bloom_container {
   display: flex;
   gap: 60px;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 60px auto;
   padding: 40px 20px;
   border-bottom: 1px solid #727272;
@@ -390,7 +390,7 @@
 .rainbow_classroom_container {
   display: flex;
   gap: 60px;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 60px auto;
   padding: 40px 20px;
   border-bottom: 1px solid #727272;
@@ -507,7 +507,7 @@
 .planets_school_container {
   display: flex;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 60px auto;
   padding: 40px 20px;
   align-items: center;
@@ -712,7 +712,7 @@
 .yes_genius_container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 60px auto;
   padding: 40px 20px;
   align-items: center;
