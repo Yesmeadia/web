@@ -1,8 +1,8 @@
 // utils/galleryImages.ts
 
 const rawImages = [
-  "/carousal/carousal_img1.jpg",
-  "/carousal/carousal_img2.jpg",
+  "/carousal/carousal_img1.JPG",
+  "/carousal/carousal_img2.JPG",
   "/carousal/carousal_img4.jpg",
   "/carousal/carousal_img6.jpeg",
   "/carousal/carousal_img7.jpg",
