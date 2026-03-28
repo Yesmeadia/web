@@ -31,13 +31,13 @@ const Contact = () => {
   const locations: Location[] = [
     {
       title: "Registered Office",
-      address: "RKP - V/720-A12, YES square,",
-      city: "Calicut, Kerala - 673633",
+      address: "RKP.V/720-A 12, Hanna Tower, Opp. BUS Stand Ramanatukara,",
+      city: "Kozhikode -673633, Kerala",
     },
     {
       title: "Administrative Office",
-      address: "A - 18, Ramanujan street,",
-      city: "New Delhi, India - 700078",
+      address: "5024, Plot no7, Block-B, 4th Floor Netaji Subash Marg,",
+      city: "Daryaganj Central Delhi, 110002",
     },
   ];
 

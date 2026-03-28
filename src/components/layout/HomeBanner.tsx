@@ -71,7 +71,7 @@ const HomeBanner = () => {
     {
       image: "/home_bg_banner5.png",
       text: "Empowering the Next Generation Through Knowledge",
-      textColor: "#ffffff",
+      textColor: "#A5874C",
     },
     {
       image: "/home_bg_banner3.jpg",
@@ -81,7 +81,7 @@ const HomeBanner = () => {
     {
       image: "/home_bg_banner6.png",
       text: "Building Brighter Futures, One Child at a Time",
-      textColor: "#2a1b63",
+      textColor: "#A5874C",
     },
   ];
 
