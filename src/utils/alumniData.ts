@@ -30,45 +30,69 @@ export const alumniData = [
     image: "/alumni/mohammad-owais.jpg"
   },
   {
-    name: "Dr. Mohammad Shaban Sohrabi",
-    position: "Senior Asst. Professor",
-    department: "Model Institute of Engineering and Technology, Jammu",
+    name: "Dr. Qamar Bhatt",
+    position: "Doctor",
+    department: "",
     image: "/images/alumni/mohammad_shaban.jpg"
   },
   {
-    name: "Manzoor Hussain IAS",
-    position: "DIGP, J & K Police",
+    name: "Sajid Ali",
+    position: "Advocate",
     department: "",
     image: "/images/alumni/manzoor_hussain.jpg"
   },
   {
-    name: "Javid Salroo IAS",
-    position: "DIGP, J & K Police",
+    name: "Shoket Hussain",
+    position: "Advocate",
     department: "",
     image: "/images/alumni/javid_salroo.jpg"
   },
   {
-    name: "Javed Shah IAS",
-    position: "DIGP, J & K Police",
+    name: "Kifayath Quazi",
+    position: "Advocate",
     department: "",
     image: "/images/alumni/javed_shah.jpg"
   },
   {
-    name: "Dr. Mohammad Shaban Sohrabi",
-    position: "Senior Asst. Professor",
-    department: "Model Institute of Engineering and Technology, Jammu",
+    name: "Wajaid Habibullah",
+    position: "Advocate",
+    department: "(High Court) J&K and Ladakh",
     image: "/images/alumni/mohammad_shaban.jpg"
   },
   {
-    name: "Manzoor Hussain IAS",
-    position: "DIGP, J & K Police",
+    name: "Umar Mehraj Khan",
+    position: "Advocate",
     department: "",
     image: "/images/alumni/manzoor_hussain.jpg"
   },
   {
-    name: "Javid Salroo IAS",
-    position: "DIGP, J & K Police",
+    name: "Wassem Zubair",
+    position: "Advocate",
     department: "",
     image: "/images/alumni/javid_salroo.jpg"
-  }
+  },
+  {
+    name: "Naif Shazad",
+    position: "Advocate",
+    department: "",
+    image: "/images/alumni/javid_salroo.jpg"
+  },
+  {
+    name: "Asif Iqbal",
+    position: "Assistant Sub-Inspector",
+    department: "Central Reserve Police Force",
+    image: "/images/alumni/javid_salroo.jpg"
+  },
+  {
+    name: "Mohd Taj",
+    position: "Indian Army",
+    department: "",
+    image: "/images/alumni/javid_salroo.jpg"
+  },
+  {
+    name: "Tahir Hamid",
+    position: "Indian Army",
+    department: "",
+    image: "/images/alumni/javid_salroo.jpg"
+  },
 ];

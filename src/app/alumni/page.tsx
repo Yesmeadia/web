@@ -1,5 +1,6 @@
 import AlumniLogin from "@/components/templates/AlumniLogin";
 import { alumniData } from "@/utils/alumniData";
+import { statelevelRanks } from "@/utils/statelevelRanks";
 import React from "react";
 import Image from "next/image";
 
@@ -132,38 +133,20 @@ const page = () => {
           <div className="state_ranks_side">
             <h2>State Level Ranks</h2>
             <div className="ranks_grid">
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Salma Aga</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Maryam Sahiba</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Sabha Majeed</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Mohd Fazaan</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Noor Fathima</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Nusrat Fathima</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Shaista Fathima</p>
-              </div>
-              <div className="rank_card">
-                <div className="rank_placeholder"></div>
-                <p className="rank_name">Malika Mushtaq</p>
-              </div>
+              {statelevelRanks.map((rank, index) => (
+                <div key={index} className="alumni_card">
+                  <div className="alumni_image">
+                    <img src={rank.image} alt={rank.name} />
+                    <div className="placeholder_image"></div>
+                  </div>
+                  <div className="alumni_info">
+                    <h3>{rank.name}</h3>
+                    <p className="position">{rank.class}</p>
+                    <p className="department">{rank.rank}</p>
+                    <p className="department">{rank.award}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
