@@ -43,10 +43,10 @@ $bg-soft: #f8fafc;
   .hero_inner {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 1680px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 clamp(16px, 3vw, 48px);
   }
 
 
@@ -145,9 +145,9 @@ $bg-soft: #f8fafc;
 
 
 .container {
-  max-width: 1200px;
+  max-width: 1680px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(16px, 3vw, 48px);
 }
 
 .subtitle {

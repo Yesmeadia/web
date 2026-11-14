@@ -618,9 +618,9 @@
 .skill_bench_container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1680px;
   margin: 60px auto;
-  padding: 40px 20px;
+  padding: 40px clamp(16px, 3vw, 48px);
   align-items: center;
   border-bottom: 1px solid #727272;
 
@@ -799,9 +799,9 @@
 .awards_container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1680px;
   margin: 60px auto;
-  padding: 40px 20px;
+  padding: 40px clamp(16px, 3vw, 48px);
   align-items: center;
 
 

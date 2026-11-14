@@ -2,7 +2,7 @@
 
 .header_section {
   z-index: 99;
-  padding: 50px 70px;
+  padding: 50px clamp(16px, 3vw, 48px);
   height: 78px;
   background-color: hsl(0, 0%, 100%);
   position: sticky;
@@ -12,13 +12,15 @@
 
   @media (max-width: 1199px) {
     height: 64px; // Slightly taller for better touch targets
-    padding: 0px 20px;
+    padding: 0px 16px;
     display: flex;
     justify-content: space-between;
   }
 
   nav {
     width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +87,7 @@
   }
 
   .button_container {
-    margin-left: 80px;
+    margin-left: clamp(20px, 4vw, 80px);
 
     button {
       background-color: #2a1b63;
@@ -251,25 +253,27 @@
 
 .home_banner {
   position: relative;
-  height: calc(100dvh - 78px);
-  padding: 40px 48px 0px 48px;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  height: auto;
+  padding: 32px clamp(16px, 3vw, 48px) 0px clamp(16px, 3vw, 48px);
 
   @media (max-width: 768px) {
-    height: 100%;
-    padding: 0 16px;
+    height: auto;
+    padding: 0 12px;
   }
 
   .home_banner_content {
-    height: calc(100% - (78px - 60px));
+    height: auto;
     border-radius: 30px;
     overflow: hidden;
-
   }
 
   .banner_slide {
     position: relative;
-    max-width: 1500px;
-    height: 650px;
+    width: 100%;
+    height: clamp(460px, 70vh, 760px);
   }
 
   .banner_slide img {
@@ -364,11 +368,15 @@
   }
 
   &.visible {
-    top: 0;
     opacity: 1;
     position: relative;
-    top: -80px;
+    top: 0;
+    margin-top: 48px;
     z-index: 1;
+
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
   }
 
   .count_section {

@@ -1,4 +1,5 @@
 import HomeBanner from "@/components/layout/HomeBanner";
+import LatestUpdates from "@/components/layout/LatestUpdates";
 import StatCard from "@/components/ui/StatCard";
 import FoundersMessage from "@/components/layout/FoundersMessage";
 import ExploreTeam from "@/components/layout/ExploreTeam";
@@ -8,6 +9,7 @@ export default async function Home() {
   return (
     <main className="home_page">
       <HomeBanner />
+      <LatestUpdates />
 
       <div className="wrapper_section">
         <div className="mission_vision_section visible">

@@ -1,5 +1,5 @@
 .gallery_section {
-height: 100dvh;
+  height: 100dvh;
   position: relative;
   padding: 4rem 0;
   overflow: hidden; // Critical to stop mobile "shaking"
@@ -10,14 +10,14 @@ height: 100dvh;
   .gallery_wrapper {
     width: 100%;
     margin: 0 auto;
-    max-width: 1400px;
-    padding: 0 1rem;
+    max-width: 1680px;
+    padding: 0 clamp(16px, 3vw, 48px);
   }
 
   .premium_swiper {
 
     overflow: visible; // Allows non-active slides to show on edges
-    
+
     .swiper-slide {
       transition: all 0.5s ease;
 
@@ -35,14 +35,14 @@ height: 100dvh;
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
     // Maintain a consistent aspect ratio
     .image_container {
       position: relative;
       width: 100%;
-      aspect-ratio: 3 / 4; 
-      
+      aspect-ratio: 3 / 4;
+
       .gallery_image {
         object-fit: cover;
         transition: transform 0.5s ease;
@@ -78,7 +78,7 @@ height: 100dvh;
         color: white;
         border-color: #2a1b63;
       }
-      
+
       // Handle Swiper disabled state
       &:disabled {
         opacity: 0.3;
@@ -91,24 +91,27 @@ height: 100dvh;
 /* Responsive Overrides */
 @media (max-width: 768px) {
   .gallery_section {
-height: 100dvh; // Force full height on mobile
+    height: 100dvh; // Force full height on mobile
     // padding: 1rem 0;
 
     .gallery_slide {
       max-width: 85vw; // Allow image to be wider on mobile
-      
+
       .image_container {
         height: 60dvh; // Adjust this value to control top/bottom spacing
       }
     }
+
     .premium_swiper {
+
       // padding: 2rem 0;
       .swiper-slide-active {
         transform: scale(1.05); // Less extreme scaling on mobile
       }
     }
-    
+
     .gallery_bottom_nav {
+
       // margin-top: 1.5rem;
       .bottom_nav_btn {
         width: 44px;
@@ -117,6 +120,7 @@ height: 100dvh; // Force full height on mobile
     }
   }
 }
+
 /* ============================================
    Responsive Adjustments (Keep Desktop Same)
 ============================================ */
@@ -396,24 +400,25 @@ height: 100dvh; // Force full height on mobile
   column-count: 4;
   column-gap: 20px;
   width: 100%;
-@media (max-width: 1100px) { 
-    column-count: 3; 
+
+  @media (max-width: 1100px) {
+    column-count: 3;
     column-gap: 20px;
   }
 
-  @media (max-width: 800px) { 
-    column-count: 2; 
+  @media (max-width: 800px) {
+    column-count: 2;
     column-gap: 16px;
   }
 
-  @media (max-width: 500px) { 
+  @media (max-width: 500px) {
     column-count: 2; // Fixed to 2 columns as requested
     column-gap: 12px; // Slightly tighter gap for mobile screens
   }
 }
 
 .masonry-item {
-break-inside: avoid;
+  break-inside: avoid;
   margin-bottom: 24px; // Vertical spacing
   border-radius: 12px; // Slightly smaller radius for mobile precision
   overflow: hidden;
@@ -422,14 +427,14 @@ break-inside: avoid;
 
   @media (max-width: 500px) {
     margin-bottom: 12px; // Match horizontal gap
-    border-radius: 8px;  // Sharper corners look "pro" on small screens
+    border-radius: 8px; // Sharper corners look "pro" on small screens
   }
-  
+
 
   .image-wrapper {
     position: relative;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    
+
     .photo {
       display: block;
       width: 100%;
@@ -444,7 +449,7 @@ break-inside: avoid;
   &:hover {
     .image-wrapper {
       transform: scale(1.02);
-      
+
       .photo {
         filter: brightness(1.1);
       }
@@ -500,7 +505,9 @@ break-inside: avoid;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 // Entrance Animation for Images
@@ -514,6 +521,7 @@ break-inside: avoid;
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

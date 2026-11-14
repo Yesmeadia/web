@@ -286,19 +286,19 @@
 .founder_message {
   background: #ffffff;
   border-radius: 24px;
-  padding: 60px 80px;
+  padding: clamp(32px, 4vw, 60px) clamp(20px, 4vw, 48px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   
   @media (max-width: 1024px) {
-    padding: 50px 60px;
+    padding: 40px 32px;
   }
   
   @media (max-width: 768px) {
-    padding: 40px 35px;
+    padding: 32px 24px;
   }
   
   @media (max-width: 480px) {
-    padding: 30px 25px;
+    padding: 24px 16px;
   }
 
   h1 {

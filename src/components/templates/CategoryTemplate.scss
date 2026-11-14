@@ -8,13 +8,13 @@
 }
 
 .category_cards {
-  padding: 60px 20px;
+  padding: 60px clamp(16px, 3vw, 48px);
   
   .cards_grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px;
-    max-width: 1200px;
+    gap: clamp(24px, 4vw, 60px);
+    max-width: 1680px;
     margin: 0 auto;
   }
   

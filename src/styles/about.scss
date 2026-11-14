@@ -278,10 +278,10 @@
 
   >div {
     flex: 2;
-    padding: 0px 60px;
+    padding: 0px clamp(16px, 3vw, 48px);
 
     @media (max-width: 768px) {
-      padding-left: 0;
+      padding: 0;
     }
 
     &:first-child {
@@ -520,9 +520,9 @@
 .administrative_container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1680px;
   margin: 60px auto;
-  padding: 40px 20px;
+  padding: 40px clamp(16px, 3vw, 48px);
   align-items: center;
 
   .left_column {

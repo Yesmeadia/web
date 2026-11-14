@@ -14,7 +14,8 @@ const Footer = () => {
     { href: "/feedback", label: "Feedback" },
     { href: "/history", label: "History" },
     { href: "/milestone", label: "Milestone" },
-
+    { href: "/careers", label: "Careers" },
+    { href: "/events", label: "Events" },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -191,7 +192,8 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="footer_copyright">
-          <p>© {currentYear} Yes India Foundation, All rights Reserved.</p>
+          <p>© {currentYear} Yasin Education Services India Foundation, All rights Reserved.</p>
+          <p>CIN: U80904KL2017NPL048772</p>
         </div>
       </div>
     </footer>

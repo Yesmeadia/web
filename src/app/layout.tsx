@@ -14,6 +14,7 @@ const funnelDisplay = Funnel_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://web.yesindiafoundation.com"),
   title: "YES INDIA FOUNDATION | YES India Makes an excellent India",
   description: "YES INDIA FOUNDATION is dedicated to supporting education, social welfare, community development, and youth empowerment across India. Join us in making a stronger, educated, and empowered nation.",
   keywords: [

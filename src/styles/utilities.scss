@@ -1,25 +1,27 @@
 .wrapper_section {
-  padding: 0px 154px;
+  width: 100%;
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px clamp(16px, 3vw, 48px);
 
   /* Large screens (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-    padding: 40px 80px;
-
-}
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    padding: 36px 40px;
+  }
 
   /* Medium screens (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    padding: 40px 60px;
-
-}
+  @media (min-width: 992px) and (max-width: 1199px) {
+    padding: 36px 32px;
+  }
 
   /* Tablets (768px - 991px) */
   @media (min-width: 769px) and (max-width: 991px) {
-    padding: 60px 40px;
+    padding: 40px 24px;
   }
 
   /* Mobile devices (up to 767px) */
   @media (max-width: 768px) {
-    padding: 48px 24px;
+    padding: 32px 16px;
   }
 }

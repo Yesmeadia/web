@@ -7,7 +7,6 @@ const AlumniLogin = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    console.log("Login attempt:", { username, password });
     // Add your login logic here
   };
 
