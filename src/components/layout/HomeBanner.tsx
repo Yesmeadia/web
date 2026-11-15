@@ -45,12 +45,12 @@ const HomeBanner = () => {
     {
       image: "/home_bg_banner1.png",
       text: "Empowering the Next Generation Through Knowledge",
-      textColor: "#f8f1e7", // Light beige for dark auditorium
+      textColor: "#ffffff",
     },
     {
       image: "/home_bg_banner5.png",
       text: "A Child Without Education is Like a Bird Without Wings",
-      textColor: "#A5874C", // Pure white for purple background
+      textColor: "#ffffff",
     },
     {
       image: "/home_bg_banner3.jpg",
@@ -66,12 +66,12 @@ const HomeBanner = () => {
     {
       image: "/home_bg_banner1.png",
       text: "Empowering the Next Generation Through Knowledge",
-      textColor: "#f8f1e7",
+      textColor: "#ffffff",
     },
     {
       image: "/home_bg_banner5.png",
       text: "Empowering the Next Generation Through Knowledge",
-      textColor: "#A5874C",
+      textColor: "#ffffff",
     },
     {
       image: "/home_bg_banner3.jpg",
@@ -81,7 +81,7 @@ const HomeBanner = () => {
     {
       image: "/home_bg_banner6.png",
       text: "Building Brighter Futures, One Child at a Time",
-      textColor: "#A5874C",
+      textColor: "#ffffff",
     },
   ];
 

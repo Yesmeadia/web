@@ -8,7 +8,7 @@ export const yesInfoCardData = [{
     link: '/history',
 },
 {
-    image: '/carousal/card_img2.png',
+    image: '/awards/award_img1.jpeg',
     title: 'Milestones of Growth: Yearly Progress Since 2007',
     backgroundColor: '#ffffffff',
     arrowColor: '#FFFFFF',

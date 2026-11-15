@@ -38,15 +38,17 @@ export default function MemorableMoments() {
                 height={32}
                 className="pin_icon"
               />
-              <div className="image_box">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={260}
-                  height={320}
-                />
+              <div className="swing_wrapper">
+                <div className="image_box">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={280}
+                    height={295}
+                  />
+                  <p>{item.title}</p>
+                </div>
               </div>
-              <p>{item.title}</p>
             </div>
           ))}
         </div>

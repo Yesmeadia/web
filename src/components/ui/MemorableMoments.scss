@@ -66,6 +66,38 @@
 
         &:hover {
           transform: translateY(-6px) scale(1.04);
+
+          .swing_wrapper {
+            animation-play-state: paused;
+          }
+        }
+
+        .swing_wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          transform-origin: 50% -10px;
+          animation: leafSwing 5.5s ease-in-out infinite;
+          will-change: transform;
+
+          @media (prefers-reduced-motion: reduce) {
+            animation: none;
+          }
+        }
+
+        &:nth-child(2n) .swing_wrapper {
+          animation-duration: 6.2s;
+          animation-delay: -1.8s;
+        }
+
+        &:nth-child(3n) .swing_wrapper {
+          animation-duration: 5.8s;
+          animation-delay: -3.2s;
+        }
+
+        &:nth-child(4n) .swing_wrapper {
+          animation-duration: 6.6s;
+          animation-delay: -0.9s;
         }
 
         .pin_icon {
@@ -78,11 +110,17 @@
         }
 
         .image_box {
+          width: 100%;
+          max-width: 284px;
           background: #fff;
           border-radius: 18px;
           box-shadow: 0 10px 25px rgba(42, 27, 99, 0.12);
           overflow: hidden;
-          padding: 0.8rem;
+          padding: 12px 12px 16px 12px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           border: 2px solid transparent;
           transition: all 0.3s ease;
 
@@ -92,16 +130,22 @@
           }
 
           img {
+            width: 100%;
+            height: auto;
+            display: block;
             border-radius: 12px;
             object-fit: cover;
           }
-        }
 
-        p {
-          margin-top: 14px;
-          font-size: 1.05rem;
-          font-weight: 600;
-          color: #2a1b63;
+          p {
+            position: relative;
+            z-index: 2;
+            margin: 14px 0 0 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #2a1b63;
+            text-align: center;
+          }
         }
       }
 
@@ -109,49 +153,112 @@
       .card_1 {
         grid-column: 1;
         grid-row: 1;
+
+        .image_box {
+          transform: rotate(7.9deg);
+          img {
+            transform: rotate(-7.9deg) scale(1.14);
+          }
+        }
       }
 
       .card_2 {
         grid-column: 2;
         grid-row: 1;
+
+        .image_box {
+          transform: rotate(4.9deg);
+          img {
+            transform: rotate(-4.9deg) scale(1.1);
+          }
+        }
       }
 
       .card_3 {
         grid-column: 3;
         grid-row: 1;
+
+        .image_box {
+          transform: rotate(-5deg);
+          img {
+            transform: rotate(5deg) scale(1.1);
+          }
+        }
       }
 
       .card_4 {
         grid-column: 1;
         grid-row: 2;
         margin-left: 7rem;
+
+        .image_box {
+          transform: rotate(4.9deg);
+          img {
+            transform: rotate(-4.9deg) scale(1.1);
+          }
+        }
       }
 
       .card_5 {
         grid-column: 3;
         grid-row: 2;
         margin-right: 7rem;
+
+        .image_box {
+          transform: rotate(-5deg);
+          img {
+            transform: rotate(5deg) scale(1.1);
+          }
+        }
       }
 
       .card_6 {
         grid-column: 1;
         grid-row: 3;
+
+        .image_box {
+          transform: rotate(7.9deg);
+          img {
+            transform: rotate(-7.9deg) scale(1.14);
+          }
+        }
       }
 
       .card_7 {
         grid-column: 2;
         grid-row: 3;
+
+        .image_box {
+          transform: rotate(4.9deg);
+          img {
+            transform: rotate(-4.9deg) scale(1.1);
+          }
+        }
       }
 
       .card_8 {
         grid-column: 3;
         grid-row: 3;
+
+        .image_box {
+          transform: rotate(-5deg);
+          img {
+            transform: rotate(5deg) scale(1.1);
+          }
+        }
       }
 
       .card_9 {
         grid-column: 1;
         grid-row: 4;
         margin-left: 7rem;
+
+        .image_box {
+          transform: rotate(4.9deg);
+          img {
+            transform: rotate(-4.9deg) scale(1.1);
+          }
+        }
       }
 
       .card_10 {
@@ -209,24 +316,25 @@
           }
 
           .image_box {
-            width: 100%; // Fill the column width
-            padding: 6px; // Thinner white border 
-            border-radius: 12px; // Scale down border radius
-            box-shadow: 0 5px 15px rgba(42, 27, 99, 0.08); // lighter shadow
+            width: 100%;
+            max-width: 100%;
+            padding: 8px 8px 12px 8px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(42, 27, 99, 0.08);
 
             img {
               width: 100%;
-              height: auto; // Maintain aspect ratio
+              height: auto;
+              display: block;
               border-radius: 8px;
             }
-          }
 
-          p {
-            // Adjust typography for 2-column width
-            font-size: 0.85rem;
-            line-height: 1.3;
-            margin-top: 10px;
-            padding: 0 2px;
+            p {
+              font-size: 0.85rem;
+              line-height: 1.3;
+              margin-top: 10px;
+              padding: 0 2px;
+            }
           }
         }
       }
@@ -240,5 +348,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes leafSwing {
+  0%,
+  100% {
+    transform: rotate(-2.5deg) translateX(-3px);
+  }
+  50% {
+    transform: rotate(2.5deg) translateX(3px);
   }
 }

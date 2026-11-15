@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import "./StatCard.scss";
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -50,11 +51,11 @@ const StatCard: React.FC<StatCardProps> = ({ icon, count, label, duration = 2000
   }, [hasAnimated, animateCount]);
 
   return (
-    <div ref={ref} className="flex items-center gap-4 my-6 p-4">
-      <div className="text-yellow-700 text-5xl flex-shrink-0">{icon}</div>
-      <div>
-        <h2 className="text-3xl font-bold text-gray-800">{displayedCount.toLocaleString()}{showPlus ? '+' : ''}</h2>
-        <p className="text-gray-600 text-lg mt-1">{label}</p>
+    <div ref={ref} className="stat_item_card">
+      <div className="stat_icon_box">{icon}</div>
+      <div className="stat_content">
+        <h2>{displayedCount.toLocaleString()}{showPlus ? '+' : ''}</h2>
+        <p>{label}</p>
       </div>
     </div>
   );

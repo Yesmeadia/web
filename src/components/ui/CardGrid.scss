@@ -9,7 +9,9 @@
 .card_wrapper {
   position: relative;
   width: 100%;
+  height: 100%;
   max-width: 420px;
+  display: flex;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -21,8 +23,19 @@
   }
 }
 
+.card_shell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.16))
+    drop-shadow(0 6px 18px rgba(0, 0, 0, 0.06));
+}
+
 .card {
   position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
   border-radius: 30px;
   overflow: hidden;
   display: flex;
@@ -32,15 +45,23 @@
   padding: 32px;
   min-height: 400px;
   transition: transform 0.3s ease;
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-  // ✅ fixed clip-path syntax — single line, no interpolation issues
-  clip-path: path("M0 0 H100% Vcalc(100% - 70px) Q100% 100%, calc(100% - 70px) 100% H0 Z");
+  background-color: #ffffff;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M96 8.54L96 96L8.54 96A20 20 0 0 0 28.36 73.33A40 40 0 0 1 73.33 28.36A20 20 0 0 0 96 8.54Z' fill='%23000'/%3E%3C/svg%3E"),
+    linear-gradient(#000, #000);
+  -webkit-mask-position: right bottom, 0 0;
+  -webkit-mask-size: 96px 96px, 100% 100%;
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-composite: xor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cpath d='M96 8.54L96 96L8.54 96A20 20 0 0 0 28.36 73.33A40 40 0 0 1 73.33 28.36A20 20 0 0 0 96 8.54Z' fill='%23000'/%3E%3C/svg%3E"),
+    linear-gradient(#000, #000);
+  mask-position: right bottom, 0 0;
+  mask-size: 96px 96px, 100% 100%;
+  mask-repeat: no-repeat, no-repeat;
+  mask-composite: exclude;
 
   @media (max-width: 768px) {
-    clip-path: path("M0 0 H100% Vcalc(100% - 50px) Q100% 100%, calc(100% - 50px) 100% H0 Z");
     min-height: 360px;
+    padding: 24px;
   }
 }
 
@@ -59,6 +80,7 @@
 
 .image_content {
   padding-top: 20px;
+  padding-right: 68px;
 
   h3 {
     font-size: 1.25rem;
@@ -71,10 +93,10 @@
 
 .arrowButton {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 52px;
-  height: 52px;
+  bottom: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -84,8 +106,8 @@
   text-decoration: none;
   transition: all 0.3s ease;
   z-index: 3;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 

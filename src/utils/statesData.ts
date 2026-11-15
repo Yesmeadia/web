@@ -4,7 +4,7 @@ import { label } from "framer-motion/client";
 export const statesData = [
   {
     name: "Jammu and Kashmir",
-    mapImage: "/states/jammu.png",
+    mapImage: "/states/jammu.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -65,7 +65,7 @@ export const statesData = [
   },
   {
     name: "Rajasthan",
-    mapImage: "/states/rajasthan.png",
+    mapImage: "/states/rajasthan.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -124,7 +124,7 @@ export const statesData = [
   },
   {
     name: "Bihar",
-    mapImage: "/states/bihar.png",
+    mapImage: "/states/bihar.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -186,7 +186,7 @@ export const statesData = [
   },
   {
     name: "West Bengal",
-    mapImage: "/states/westbengal.png",
+    mapImage: "/states/west-bengal.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -244,7 +244,7 @@ export const statesData = [
   },
   {
     name: "Maharashtra",
-    mapImage: "/states/maharashtra.png",
+    mapImage: "/states/maharashtra.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -305,7 +305,7 @@ export const statesData = [
   },
   {
     name: "Andhra Pradesh",
-    mapImage: "/states/andhrapradesh.png",
+    mapImage: "/states/andhra-pradesh.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -365,7 +365,7 @@ export const statesData = [
   },
   {
     name: "Karnataka",
-    mapImage: "/states/karnataka.png",
+    mapImage: "/states/karnataka.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [
@@ -426,7 +426,7 @@ export const statesData = [
   },
   {
     name: "Kerala",
-    mapImage: "/states/kerala.png",
+    mapImage: "/states/kerala.svg",
     bannerImage: "/state_sample.png",
     demographics: {
       details: [

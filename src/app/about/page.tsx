@@ -169,36 +169,70 @@ const about = () => {
             <p>Feedback from Noted Personalities</p>
           </div>
 
-          <div className="voice_card">
-            <p className="voice_text">
-              Our locality, Jammu and Kashmir is a challenging hilly region,
-              where reaching to remote communities is difficult. Economically
-              and educationally, these areas remain underdeveloped. So, here
-              comes the importance of organizations which can satisfy the needs
-              of people. YES India Foundation is one of such organizations which
-              proved very successful in our region. I have seen for the last 15
-              years, they have made successful interventions in the system here
-              as I have been invited in many programs as guest in the title, the
-              principal and professor of Degree College Poonch. So, their main
-              focus is to remain on the dimension of creating scientific
-              temperament among younger generation and contribute towards the
-              promotion of different culture and civilizations here. My opinion
-              about this organization is that it has done a wonderful job in
-              this challenging area.
-            </p>
+          <div className="voice_cards_grid">
+            <div className="voice_card">
+              <p className="voice_text">
+                Our locality, Jammu and Kashmir is a challenging hilly region,
+                where reaching to remote communities is difficult. Economically
+                and educationally, these areas remain underdeveloped. So, here
+                comes the importance of organizations which can satisfy the needs
+                of people. YES India Foundation is one of such organizations which
+                proved very successful in our region. I have seen for the last 15
+                years, they have made successful interventions in the system here
+                as I have been invited in many programs as guest in the title, the
+                principal and professor of Degree College Poonch. So, their main
+                focus is to remain on the dimension of creating scientific
+                temperament among younger generation and contribute towards the
+                promotion of different culture and civilizations here. My opinion
+                about this organization is that it has done a wonderful job in
+                this challenging area.
+              </p>
 
-            <div className="voice_profile">
-              <div className="profile_img">
-                <Image
-                  src="/feedback/prof_seyd-1.jpg"
-                  alt="Prof. Seyd Musarath Hussain Shah"
-                  fill
-                  className="profile_image"
-                />
+              <div className="voice_profile">
+                <div className="profile_img">
+                  <Image
+                    src="/feedback/prof_seyd-1.jpg"
+                    alt="Prof. Seyd Musarath Hussain Shah"
+                    fill
+                    className="profile_image"
+                  />
+                </div>
+                <div className="profile_info">
+                  <h5>Prof. Seyd Musarath Hussain Shah</h5>
+                  <p>Principal Govt. Degree College Mandi</p>
+                </div>
               </div>
-              <div className="profile_info">
-                <h5>Prof. Seyd Musarath Hussain Shah</h5>
-                <p>Principal Govt. Degree College Mandi</p>
+            </div>
+
+            <div className="voice_card">
+              <p className="voice_text">
+                At present, YES India Schools are functioning in various regions
+                of Jammu &amp; Kashmir and other states across India. In the
+                initial days of Janab Shoukat Sab’s involvement, Razaul Uloom
+                Islamia Higher Secondary School was operating as a middle school.
+                Under his visionary leadership and guidance, the school
+                transitioned from a middle school to a high school and eventually
+                earned recognition as a higher secondary school. The educational
+                system of the school is commendable, as many alumni have gone on
+                to achieve significant success, including securing prestigious
+                positions such as civil servants. The primary focus of YES India
+                Schools is to prioritize creative and exploratory learning over
+                mugging up learning.
+              </p>
+
+              <div className="voice_profile">
+                <div className="profile_img">
+                  <Image
+                    src="/feedback/mufthi.jpg"
+                    alt="Hazrath Moulana Mufthi Farooque Hussain Misbahi"
+                    fill
+                    className="profile_image"
+                  />
+                </div>
+                <div className="profile_info">
+                  <h5>Hazrath Moulana Mufthi Farooque Hussain Misbahi</h5>
+                  <p>Mufti Poonch</p>
+                </div>
               </div>
             </div>
           </div>
@@ -256,7 +290,8 @@ const about = () => {
       <section className="administrative_section wrapper_section">
         <div className="administrative_container">
           <div className="left_column">
-            <div>
+            <div className="admin_intro">
+              <span className="admin_eyebrow">Governance &amp; Structure</span>
               <h2>
                 The Administrative <br /> Hierarchy
               </h2>
@@ -272,32 +307,72 @@ const about = () => {
             </div>
           </div>
 
-          <div className="right_column ">
-            <div className="position level1">Managing Director</div>
-
-            <div className="group">
-              <div className="group-title green">Directorate</div>
-              <div className="sub-item">Administration</div>
-              <div className="sub-item">Finance</div>
-              <div className="sub-item">Academic</div>
-              <div className="sub-item">Human Resource</div>
-              <div className="sub-item">Public Relation</div>
+          <div className="right_column org_chart">
+            {/* Tier 1: Managing Director */}
+            <div className="org_node org_node_primary">
+              <span className="org_tier_badge">01 · Executive</span>
+              <h4>Managing Director</h4>
             </div>
 
-            <div className="position yellow">Regional Manager</div>
-            <div className="position orange">Zonal Manager</div>
+            <div className="org_connector" aria-hidden="true" />
 
-            <div className="group">
-              <div className="sub-item">Zonal CO Human Resource</div>
-              <div className="sub-item">Zonal CO ADMIN</div>
-              <div className="sub-item">Zonal CO Finance</div>
-              <div className="sub-item">Zonal CO Academic</div>
-              <div className="sub-item">Zonal CO Public Relation</div>
+            {/* Tier 2: Directorate */}
+            <div className="org_group_card">
+              <div className="org_group_header">
+                <span className="org_tier_badge">02 · Central</span>
+                <h4>Directorate</h4>
+              </div>
+              <div className="org_sub_grid">
+                <span className="org_sub_pill">Administration</span>
+                <span className="org_sub_pill">Finance</span>
+                <span className="org_sub_pill">Academic</span>
+                <span className="org_sub_pill">Human Resource</span>
+                <span className="org_sub_pill">Public Relation</span>
+              </div>
             </div>
 
-            <div className="position green">Principal</div>
-            <div className="position orange-light">Academic Coordinator</div>
-            <div className="position peach">Teachers</div>
+            <div className="org_connector" aria-hidden="true" />
+
+            {/* Tier 3: Regional Manager */}
+            <div className="org_node org_node_accent">
+              <span className="org_tier_badge">03 · Regional</span>
+              <h4>Regional Manager</h4>
+            </div>
+
+            <div className="org_connector" aria-hidden="true" />
+
+            {/* Tier 4: Zonal Manager & Coordinators */}
+            <div className="org_group_card">
+              <div className="org_group_header">
+                <span className="org_tier_badge">04 · Zonal</span>
+                <h4>Zonal Manager</h4>
+              </div>
+              <div className="org_sub_grid">
+                <span className="org_sub_pill">Zonal CO Human Resource</span>
+                <span className="org_sub_pill">Zonal CO Admin</span>
+                <span className="org_sub_pill">Zonal CO Finance</span>
+                <span className="org_sub_pill">Zonal CO Academic</span>
+                <span className="org_sub_pill">Zonal CO Public Relation</span>
+              </div>
+            </div>
+
+            <div className="org_connector" aria-hidden="true" />
+
+            {/* Tier 5: Campus Leadership & Faculty */}
+            <div className="org_campus_flow">
+              <div className="org_node org_node_campus">
+                <span className="org_tier_badge">05 · Campus</span>
+                <h4>Principal</h4>
+              </div>
+              <div className="org_connector_sm" aria-hidden="true" />
+              <div className="org_node org_node_campus">
+                <h4>Academic Coordinator</h4>
+              </div>
+              <div className="org_connector_sm" aria-hidden="true" />
+              <div className="org_node org_node_campus org_node_faculty">
+                <h4>Teachers</h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import React from "react";
 // Define the expected structure of the state prop (optional but recommended)
 interface StateData {
   name: string;
-  mapImage: string;
+  mapImage?: string;
   bannerImage: string;
   demographics: {
     details: { label: string; value: string }[];
@@ -27,15 +27,17 @@ const StateCard = ({ state }: { state: StateData }) => {
       {/* LEFT COLUMN */}
       <div className="demographics_left">
         <div className="state_map_container">
-          <div className="map_placeholder">
-            <Image
-              src={state.mapImage}
-              alt={`${state.name} map`}
-              width={319}
-              height={237}
-              priority
-            />
-          </div>
+          {state.mapImage && (
+            <div className="map_placeholder">
+              <Image
+                src={state.mapImage}
+                alt={`${state.name} map`}
+                width={460}
+                height={360}
+                priority
+              />
+            </div>
+          )}
 
           <div className="state_label">
             <h2>{state.name}</h2>

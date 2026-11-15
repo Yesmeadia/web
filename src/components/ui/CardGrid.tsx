@@ -11,24 +11,26 @@ export default function CardGrid() {
 
         {yesInfoCardData.map((item, i) => (
           <div key={i} className="card_wrapper">
-            <a
-              href={item?.link}
-              className="card"
-              style={{ backgroundColor: item?.backgroundColor }}
-            >
-              <div className="imageWrapper">
-                <Image
-                  src={item?.image}
-                  alt={item?.title}
-                  fill
-                  className="image"
-                />
-              </div>
+            <div className="card_shell">
+              <a
+                href={item?.link}
+                className="card"
+                style={{ backgroundColor: item?.backgroundColor }}
+              >
+                <div className="imageWrapper">
+                  <Image
+                    src={item?.image}
+                    alt={item?.title}
+                    fill
+                    className="image"
+                  />
+                </div>
 
-              <div className="image_content">
-                <h3>{item?.title}</h3>
-              </div>
-            </a>
+                <div className="image_content">
+                  <h3>{item?.title}</h3>
+                </div>
+              </a>
+            </div>
 
             <a
               href={item?.link}

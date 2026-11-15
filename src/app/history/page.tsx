@@ -102,12 +102,12 @@ const History = () => {
 
         <div className="buds_bloom_container">
           <div className="left_column">
-            <div className="logo_wrapper">
+            <div className="logo_wrapper history_photo">
               <Image
                 src={"/history/history1.jpg"}
-                alt="history"
-                width={300}
-                height={180}
+                alt="Early YES India Foundation gathering"
+                width={720}
+                height={480}
                 priority
               />
             </div>
