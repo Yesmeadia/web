@@ -170,7 +170,7 @@ const rawCampuses = [
     url: "",
   },
   {
-    image: "/institutions/maharashtra/huh.png",
+    image: "/institutions/maharashtra/huh.jpg",
     location: "H.U.H MUNDIA PUBLIC SCHOOL - CHALISGOAN, MAHARASHTRA ",
     url: "",
   },
@@ -180,7 +180,7 @@ const rawCampuses = [
     url: "",
   },
   {
-    image: "/institutions/south/yesuq.png",
+    image: "/institutions/south/yesuq.jpg",
     location: "UMMMUL QURA HIGHER SECONDARY SCHOOL - MONGAM, KERALA ",
     url: "",
   },
