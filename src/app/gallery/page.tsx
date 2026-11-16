@@ -3,6 +3,7 @@
 
 import GalleryCarousel from "@/components/ui/GalleryCarousel";
 import GalleryGrid from "@/components/ui/GalleryGrid";
+import InstagramReels from "@/components/ui/InstagramReels";
 
 
 
@@ -14,8 +15,9 @@ const page = () => {
       </section>
 
       <section className="wrapper_section">
-         <div style={{margin:"40px 0px"}}>
-        <GalleryGrid/>
+        <div className="gallery_content_wrap">
+          <InstagramReels />
+          <GalleryGrid />
         </div>
       </section>
     </>

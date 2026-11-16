@@ -7,10 +7,11 @@
   // background: linear-gradient(145deg, #f9fafc, #eef1f6);
   // padding: 4rem 1.5rem;
       padding: 40px clamp(16px, 3vw, 48px) 20px clamp(16px, 3vw, 48px);
-          @media (max-width:768px) {
-            height: 100%;
-      padding: 0px 16px;
-    }
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: auto;
+    padding: 16px 16px 8px 16px;
+  }
   .gallery_wrapper {
     position: relative;
     width: 100%;
@@ -153,8 +154,12 @@ background: var(--YES-Blue, #2A1B63);
   }
 }
 
-.gallery_canvas_container{
-    
+.gallery_content_wrap {
+  margin: 40px 0;
+
+  @media (max-width: 768px) {
+    margin: 16px 0 28px 0;
+  }
 }
 
   
