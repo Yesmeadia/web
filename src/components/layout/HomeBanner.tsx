@@ -70,7 +70,7 @@ const HomeBanner = () => {
     },
     {
       image: "/home_bg_banner5.png",
-      text: "Empowering the Next Generation Through Knowledge",
+      text: "A Child Without Education is Like a Bird Without Wings",
       textColor: "#ffffff",
     },
     {
@@ -80,8 +80,6 @@ const HomeBanner = () => {
     },
     {
       image: "/home_bg_banner6.png",
-      text: "Building Brighter Futures, One Child at a Time",
-      textColor: "#ffffff",
     },
   ];
 
