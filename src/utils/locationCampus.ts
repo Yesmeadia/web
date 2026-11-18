@@ -27,7 +27,7 @@ const rawCampuses = [
   {
     image: "/institutions/poonch/maldayan.jpg",
     location: "YASEEN ENGLISH SCHOOL - MALDIYALAN",
-    url: "https://www.youtube.com/watch?v=lPnkh1hnt50",
+    url: "https://www.youtube.com/watch?v=uoUzpxUtIsU",
   },
   {
     image: "/institutions/poonch/daraschool.jpeg",

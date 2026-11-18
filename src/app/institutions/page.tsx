@@ -2,16 +2,41 @@
 
 import { campuses } from "@/utils/locationCampus";
 import Image from "next/image";
-import React from "react";
-import { PlayCircle } from "lucide-react";
+import React, { useState } from "react";
+import { PlayCircle, X } from "lucide-react";
+
+function getVideoEmbed(url: string): { type: "video" | "iframe"; src: string } | null {
+  if (!url) return null;
+  const trimmed = url.trim();
+  if (!trimmed) return null;
+
+  if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(trimmed)) {
+    return { type: "video", src: trimmed };
+  }
+
+  const ytMatch = trimmed.match(
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/i
+  );
+  if (ytMatch) {
+    return {
+      type: "iframe",
+      src: `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0`,
+    };
+  }
+
+  const vimeoMatch = trimmed.match(/vimeo\.com\/(\d+)/i);
+  if (vimeoMatch) {
+    return {
+      type: "iframe",
+      src: `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`,
+    };
+  }
+
+  return { type: "iframe", src: trimmed };
+}
 
 const Page = () => {
-  // const router = useRouter();
-
-  const handleVideoClick = (url: string) => {
-    // Navigate to external video URL (can be YouTube, Vimeo, or any link)
-    window.open(url, "_blank");
-  };
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   return (
     <>
@@ -119,35 +144,83 @@ const Page = () => {
           </p>
 
           <div className="campus_grid">
-            {campuses.map((campus, i) => (
-              <div key={i} className="campus_card">
-                <div className="campus_image_wrapper">
-                  <Image
-                    src={campus.image}
-                    alt={campus.location}
-                    width={400}
-                    height={300}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={80}
-                    className="campus_image"
-                  />
+            {campuses.map((campus, i) => {
+              const video = getVideoEmbed(campus.url || "");
+              const isPlaying = playingIndex === i && video !== null;
+              const hasValidImage = Boolean(
+                campus.image && /\.[a-z0-9]+$/i.test(campus.image)
+              );
 
-                  {/* Play Button Overlay */}
-                  <button
-                    className="video_play_button"
-                    onClick={() => campus.url && handleVideoClick(campus.url)}
-                    aria-label={`Play video for ${campus.location}`}
-                  >
-                    <PlayCircle size={64} className="play_icon" />
-                  </button>
+              return (
+                <div key={i} className="campus_card">
+                  <div className="campus_image_wrapper">
+                    {isPlaying && video ? (
+                      <div className="campus_video_frame">
+                        <button
+                          type="button"
+                          className="campus_video_close"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setPlayingIndex(null);
+                          }}
+                          aria-label={`Close video for ${campus.location}`}
+                        >
+                          <X size={18} />
+                        </button>
+                        {video.type === "video" ? (
+                          <video
+                            src={video.src}
+                            className="campus_video_player"
+                            controls
+                            autoPlay
+                            playsInline
+                          />
+                        ) : (
+                          <iframe
+                            src={video.src}
+                            title={campus.location}
+                            className="campus_video_player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        )}
+                      </div>
+                    ) : (
+                      <>
+                        {hasValidImage && (
+                          <Image
+                            src={campus.image}
+                            alt={campus.location}
+                            width={400}
+                            height={300}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            quality={80}
+                            className="campus_image"
+                          />
+                        )}
 
-                  {/* Gradient Overlay + Location */}
-                  <div className="campus_overlay">
-                    <p className="campus_location">{campus.location}</p>
+                        {/* Play Button Overlay */}
+                        {video && (
+                          <button
+                            type="button"
+                            className="video_play_button"
+                            onClick={() => setPlayingIndex(i)}
+                            aria-label={`Play video for ${campus.location}`}
+                          >
+                            <PlayCircle size={64} className="play_icon" />
+                          </button>
+                        )}
+
+                        {/* Gradient Overlay + Location */}
+                        <div className="campus_overlay">
+                          <p className="campus_location">{campus.location}</p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
