@@ -31,22 +31,22 @@ export const instagramReels: InstagramReelItem[] = [
   },
   {
     id: "reel-2",
-    url: "https://www.instagram.com/yes_india_foundation_/reel/Dfte8odiQ2h/",
+    url: "https://www.instagram.com/yes_india_foundation_/reel/Df4jQzIS_G8/",
   },
   {
     id: "reel-3",
-    url: "https://www.instagram.com/yes_india_foundation_/reel/DfrkUlVCLPy/",
+    url: "https://www.instagram.com/yes_india_foundation_/reel/Df1r_JuSxFk/",
   },
   {
     id: "reel-4",
-    url: "https://www.instagram.com/yes_india_foundation_/reel/Dfl7Gq3zCz0/",
+    url: "https://www.instagram.com/yes_india_foundation_/reel/Dfte8odiQ2h/",
   },
   {
     id: "reel-5",
-    url: "https://www.instagram.com/yes_india_foundation_/reel/Dflur0rycOs/",
+    url: "https://www.instagram.com/yes_india_foundation_/reel/DfrkUlVCLPy/",
   },
   {
     id: "reel-6",
-    url: "https://www.instagram.com/yes_india_foundation_/reel/DffIs9KKkS6/",
+    url: "https://www.instagram.com/yes_india_foundation_/reel/Dfl7Gq3zCz0/",
   },
 ];
