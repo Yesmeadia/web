@@ -2,17 +2,20 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
+const ALUMNI_PORTAL_URL = "https://alumni.yesindiafoundation.com";
+
 const AlumniLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [noticeType, setNoticeType] = useState<"none" | "empty" | "construction">("none");
 
-  const handleLogin = () => {
-    // Add your login logic here
-  };
-
-  const handleForgotPassword = () => {
-    console.log("Forgot password clicked");
-    // Add your forgot password logic here
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!username.trim() && !password.trim()) {
+      setNoticeType("empty");
+      return;
+    }
+    setNoticeType("construction");
   };
 
   return (
@@ -22,14 +25,14 @@ const AlumniLogin = () => {
 
       {/* Background Image */}
       <div className="alumni_bg_wrapper">
-          <Image
-                    src="/alumni/alumni_login_bg.png"
-                    alt="Alumni celebration background"
-                    width={1400}
-                    height={750}
-                    priority
-                    className="alumni_bg_image"
-                  />
+        <Image
+          src="/alumni/alumni_login_bg.png"
+          alt="Alumni celebration background"
+          width={1400}
+          height={750}
+          priority
+          className="alumni_bg_image"
+        />
         <div className="alumni_bg_overlay"></div>
       </div>
 
@@ -48,14 +51,17 @@ const AlumniLogin = () => {
         <div className="alumni_login_card">
           <h2 className="login_heading">Welcome Back</h2>
 
-          <div className="login_form">
+          <form className="login_form" onSubmit={handleLogin}>
             {/* Username Input */}
             <div className="input_group">
               <input
                 type="text"
                 placeholder="Username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  if (noticeType !== "none") setNoticeType("none");
+                }}
                 className="login_input"
               />
             </div>
@@ -66,26 +72,53 @@ const AlumniLogin = () => {
                 type="password"
                 placeholder="Password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  if (noticeType !== "none") setNoticeType("none");
+                }}
                 className="login_input"
               />
             </div>
 
             {/* Login Button */}
-            <button onClick={handleLogin} className="login_button">
+            <button type="submit" className="login_button">
               Login
             </button>
 
-            {/* Forgot Password Link */}
+            {noticeType === "empty" && (
+              <div className="login_notice login_notice--warn" role="status">
+                Please enter your username and password.
+              </div>
+            )}
+
+            {noticeType === "construction" && (
+              <div className="login_notice" role="status">
+                Your account will be activated soon. Please register your account at{" "}
+                <a
+                  href={ALUMNI_PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="login_notice_link"
+                >
+                  alumni.yesindiafoundation.com
+                </a>
+                .
+              </div>
+            )}
+
+            {/* Register as Alumni Link */}
             <div className="forgot_password_wrapper">
-              <button
-                onClick={handleForgotPassword}
+              <span className="register_prompt">Not registered yet? </span>
+              <a
+                href={ALUMNI_PORTAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="forgot_password_link"
               >
-                Forgot Password?
-              </button>
+                Register as Alumni
+              </a>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

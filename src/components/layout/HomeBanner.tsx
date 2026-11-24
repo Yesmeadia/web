@@ -1,25 +1,5 @@
 
 
-// const HomeBanner = () => {
-//   return (
-//     <div className="home_banner">
-//       <div className="home_banner_content">
-//         <h1>
-//           A Child Without <br /> Education is Like a <br /> Bird Without Wings
-//         </h1>
-//       </div>
-
-
-
-//       {/* home banner mobile-------------> */}
-//       {/* <div className="home_banner_mobile">
-// <Image src={"/home_banner.png"} alt="" height={521} width={326} priority/>
-//       </div> */}
-//     </div>
-//   );
-// };
-
-// export default HomeBanner;
 "use client";
 
 import Image from "next/image";
@@ -33,6 +13,8 @@ import { useEffect, useState } from "react";
 
 const HomeBanner = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [typedLength, setTypedLength] = useState(0);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -85,6 +67,24 @@ const HomeBanner = () => {
 
 
   const banners = isMobile ? mobileBanners : desktopBanners;
+  const activeText = banners[activeSlide]?.text ?? "";
+
+  useEffect(() => {
+    setTypedLength(0);
+    if (!activeText) return;
+
+    const timer = setInterval(() => {
+      setTypedLength((prev) => {
+        if (prev >= activeText.length) {
+          clearInterval(timer);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 42);
+
+    return () => clearInterval(timer);
+  }, [activeSlide, activeText]);
 
   return (
     <div className="home_banner">
@@ -100,6 +100,7 @@ const HomeBanner = () => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"
         autoplay={{ delay: 4000, disableOnInteraction: false }}
+        onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
         navigation={{
           nextEl: ".next_btn",
           prevEl: ".prev_btn",
@@ -121,7 +122,18 @@ const HomeBanner = () => {
                 height={isMobile ? 750 : 750}
                 priority
               />
-              <h1 style={{ color: banner.textColor }}>{banner.text}</h1>
+              {banner.text && (
+                <h1 style={{ color: banner.textColor }}>
+                  {index === activeSlide
+                    ? banner.text.slice(0, typedLength)
+                    : banner.text}
+                  {index === activeSlide && (
+                    <span className="typing_cursor" aria-hidden="true">
+                      |
+                    </span>
+                  )}
+                </h1>
+              )}
             </div>
           </SwiperSlide>
         ))}

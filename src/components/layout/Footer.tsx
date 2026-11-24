@@ -3,22 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const navLinks = [
+  { href: "/about", label: "About Us" },
+  { href: "/academic", label: "Academic" },
+  { href: "/gpp", label: "YES GPP" },
+  { href: "/history", label: "History" },
+  { href: "/events", label: "Events" },
+  { href: "/milestone", label: "Milestone" },
+  { href: "/careers", label: "Careers" },
+  { href: "/alumni", label: "Alumni" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/feedback", label: "Feedback" },
+];
+
 const Footer = () => {
   const pathname = usePathname();
-  const navLinks = [
-    { href: "/about", label: "About Us" },
-    { href: "/academic", label: "Academic" },
-    { href: "/gpp", label: "YES GPP" },
-    { href: "/history", label: "History" },
-    { href: "/events", label: "Events" },
-    { href: "/milestone", label: "Milestone" },
-    { href: "/careers", label: "Careers" },
-    { href: "/alumni", label: "Alumni" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/feedback", label: "Feedback" },
-
-  ];
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -46,14 +45,15 @@ const Footer = () => {
           <div className="footer_navlinks">
             <h5>Quick Links</h5>
             <ul>
-              {navLinks.map((list, i) => (
-                <li key={i}>
+              {navLinks.map((list) => (
+                <li key={list.href}>
                   <Link
-                    href={list?.href}
-                    className={`nav_link ${pathname === list.href ? "active" : ""
-                      }`}
+                    href={list.href}
+                    className={`nav_link ${
+                      pathname === list.href ? "active" : ""
+                    }`}
                   >
-                    {list?.label}
+                    {list.label}
                   </Link>
                 </li>
               ))}

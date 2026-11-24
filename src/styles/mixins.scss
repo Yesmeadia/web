@@ -358,6 +358,24 @@
       right: 16px;
       white-space: normal;
     }
+
+    .typing_cursor {
+      display: inline-block;
+      margin-left: 2px;
+      color: inherit;
+      font-weight: 400;
+      animation: bannerBlink 0.75s step-end infinite;
+    }
+  }
+
+  @keyframes bannerBlink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 
   /* --- Navigation Buttons --- */

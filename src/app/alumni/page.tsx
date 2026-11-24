@@ -2,7 +2,7 @@ import AlumniLogin from "@/components/templates/AlumniLogin";
 import { alumniData } from "@/utils/alumniData";
 import { statelevelRanks } from "@/utils/statelevelRanks";
 import React from "react";
-import Image from "next/image";
+import WorldMapDottedBg from "@/components/ui/WorldMapDottedBg";
 
 const page = () => {
 
@@ -10,18 +10,11 @@ const page = () => {
     <>
       <section className="wrapper_section">
         <div className="alumni_banner_section">
-          <Image
-            src="/states_banner_bg.png"
-            alt="alumni_banner"
-            width={1222}
-            height={687}
-            priority
-            className="alumni_banner_image"
-          />
+          <WorldMapDottedBg />
           <div className="alumni_banner_contents">
             <h1>
               Tailored Careers: <br />
-              YES India Alumni
+              <span>YES India</span> Alumni
             </h1>
             <div className="button_contanier">
               <a style={{ textDecoration: "none" }} href="#alumni-grid">

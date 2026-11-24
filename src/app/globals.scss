@@ -128,15 +128,101 @@ html.lenis, html.lenis body {
 // }
 
 
-/* Unified mobile paragraph typography across all pages and components */
+/* Unified paragraph typography across all pages and components */
+:is(main, section, .wrapper_section)
+  p:not(
+    button p,
+    .stat_item_card p,
+    .voice_profile p,
+    .section_header p,
+    .alumni_info p,
+    footer p,
+    .campus_location,
+    .position,
+    .department
+  ),
+.feedback_card .feedback_text,
+.feedback_card.tall .feedback_text,
+.feedback_card.small .feedback_text {
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+}
+
 @media (max-width: 768px) {
-  main p,
-  section p,
-  .wrapper_section p,
+  :is(main, section, .wrapper_section)
+    p:not(
+      button p,
+      .stat_item_card p,
+      .voice_profile p,
+      .section_header p,
+      .alumni_info p,
+      footer p,
+      .campus_location,
+      .position,
+      .department
+    ),
   .feedback_card .feedback_text,
   .feedback_card.tall .feedback_text,
   .feedback_card.small .feedback_text {
     font-size: 14px !important;
     line-height: 1.6 !important;
+  }
+}
+
+/* Unified compact Banner Section sizing across all pages (desktop & mobile) */
+.about_banner_container,
+.academic_banner_container,
+.careers_banner_container,
+.charity_banner_container,
+.events_banner_container,
+.feedback_banner_container,
+.gpp_banner_container,
+.institutions_banner_container {
+  height: clamp(300px, 44vh, 440px) !important;
+  background: transparent !important;
+  overflow: visible !important;
+
+  .waves {
+    overflow: visible !important;
+    filter: none !important;
+    opacity: 0.85 !important;
+
+    .wave_line {
+      overflow: visible !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: clamp(210px, 32vh, 280px) !important;
+  }
+}
+
+.alumni_banner_section,
+.state_bg_container {
+  height: auto !important;
+  min-height: clamp(380px, 52vh, 520px) !important;
+  padding: 48px 0 !important;
+  align-items: center;
+
+  .alumni_banner_contents,
+  .state_banner_contents {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 2;
+    gap: 24px !important;
+
+    h1 {
+      padding-top: 0 !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto !important;
+    padding: 20px 0 12px 0 !important;
+
+    .alumni_banner_contents,
+    .state_banner_contents {
+      gap: 14px !important;
+    }
   }
 }
