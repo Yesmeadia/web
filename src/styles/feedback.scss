@@ -346,9 +346,16 @@
     border-radius: 16px;
 
     .feedback_text {
-      // text-align: start;
       font-size: 0.95rem;
       line-height: 1.7;
+    }
+
+    &.tall,
+    &.small {
+      .feedback_text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
     }
   }
 

@@ -126,3 +126,17 @@ html.lenis, html.lenis body {
 // p {
 //   margin: 0;
 // }
+
+
+/* Unified mobile paragraph typography across all pages and components */
+@media (max-width: 768px) {
+  main p,
+  section p,
+  .wrapper_section p,
+  .feedback_card .feedback_text,
+  .feedback_card.tall .feedback_text,
+  .feedback_card.small .feedback_text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+}
