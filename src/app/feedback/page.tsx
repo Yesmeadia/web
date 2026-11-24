@@ -46,7 +46,7 @@ const page = () => {
         <div className="banner_content">
           <h1>
             Voices of Praise: <br />
-            Feedback from <span>Noted Personalities</span>
+            from <span>Dignitaries</span>
           </h1>
         </div>
 

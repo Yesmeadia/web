@@ -30,7 +30,7 @@ export const latestNews: NewsItem[] = [
     id: "principals-meet-2026",
     day: "31",
     monthYear: "Dec 2026",
-    title: "PRINCIPALS MEET",
+    title: "PRINCIPALS' SUMMIT",
     description:
       "Principals meet for all principals of YES India institutes on 31 December 2026.",
     href: "/events",
@@ -40,10 +40,10 @@ export const latestNews: NewsItem[] = [
     category: "Leadership Meet",
   },
   {
-    id: "entrace-summit-2026",
+    id: "entrants-summit-2026",
     day: "29",
     monthYear: "Nov 2026",
-    title: "ENTRACE SUMMIT 2026",
+    title: "ENTRANTS' SUMMIT 2026",
     description:
       "Entrace summit for all new entrance of YES India institutes on 29 November 2026.",
     href: "/events",

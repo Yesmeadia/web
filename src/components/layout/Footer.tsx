@@ -8,14 +8,15 @@ const Footer = () => {
   const navLinks = [
     { href: "/about", label: "About Us" },
     { href: "/academic", label: "Academic" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/gpp", label: "Yes GPP" },
-    { href: "/alumni", label: "Alumni" },
-    { href: "/feedback", label: "Feedback" },
+    { href: "/gpp", label: "YES GPP" },
     { href: "/history", label: "History" },
+    { href: "/events", label: "Events" },
     { href: "/milestone", label: "Milestone" },
     { href: "/careers", label: "Careers" },
-    { href: "/events", label: "Events" },
+    { href: "/alumni", label: "Alumni" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/feedback", label: "Feedback" },
+
   ];
 
   const currentYear = new Date().getFullYear();
@@ -93,7 +94,9 @@ const Footer = () => {
               <ul>
                 <li>
                   {" "}
-                  <Link href={"https://www.facebook.com/YESINDIAFOUNDATION/"} aria-label="facebook">
+                  <Link href={"https://www.facebook.com/YESINDIAFOUNDATION/"}
+                    target="_blank"
+                    aria-label="facebook">
                     <svg
                       width="20"
                       height="20"
@@ -110,7 +113,9 @@ const Footer = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link href={"https://www.instagram.com/yes_india_foundation_/"} aria-label="instagram">
+                  <Link href={"https://www.instagram.com/yes_india_foundation_/"}
+                    target="_blank"
+                    aria-label="instagram">
                     <svg
                       width="20"
                       height="20"
@@ -142,20 +147,22 @@ const Footer = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link href={"#"} aria-label="x">
+                  <Link
+                    href={"https://www.youtube.com/@yesmedia-qv3pb"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="youtube"
+                  >
                     <svg
                       width="20"
                       height="20"
-                      viewBox="0 0 20 20"
+                      viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M10.9006 8.92667L6.91225 3.335C6.866 3.27004 6.80487 3.21708 6.73398 3.18055C6.6631 3.14401 6.5845 3.12497 6.50475 3.125H4.39975C4.308 3.12512 4.21805 3.15048 4.13975 3.19831C4.06146 3.24613 3.99783 3.31458 3.95583 3.39616C3.91384 3.47773 3.8951 3.56929 3.90167 3.6608C3.90824 3.75232 3.93987 3.84026 3.99308 3.915L9.09892 11.0733M10.9006 8.92667L16.0064 16.085C16.0596 16.1597 16.0913 16.2477 16.0978 16.3392C16.1044 16.4307 16.0857 16.5223 16.0437 16.6038C16.0017 16.6854 15.938 16.7539 15.8597 16.8017C15.7814 16.8495 15.6915 16.8749 15.5997 16.875H13.4947C13.415 16.875 13.3364 16.856 13.2655 16.8195C13.1946 16.7829 13.1335 16.73 13.0872 16.665L9.09892 11.0733M10.9006 8.92667L15.7689 3.125M9.09892 11.0733L4.23058 16.875"
-                        stroke="white"
-                        strokeWidth="1.25"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        d="M21.582 6.186a2.506 2.506 0 0 0-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418A2.506 2.506 0 0 0 2.418 6.186C2 7.746 2 12 2 12s0 4.254.418 5.814a2.506 2.506 0 0 0 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418a2.506 2.506 0 0 0 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814ZM10 15.464V8.536L16 12l-6 3.464Z"
+                        fill="white"
                       />
                     </svg>
                   </Link>
@@ -163,7 +170,9 @@ const Footer = () => {
 
                 <li>
                   {" "}
-                  <Link href={"#"} aria-label="linkedIn">
+                  <Link href={"https://www.linkedin.com/company/yes-india-foundation/"}
+                    target="_blank"
+                    aria-label="linkedIn">
                     <svg
                       width="18"
                       height="20"
