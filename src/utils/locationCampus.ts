@@ -199,6 +199,11 @@ const rawCampuses = [
     location: "YASEEN COLLEGE OF INTEGRATED STUDIES - TADIPATRI, ANDHRA PRADESH ",
     url: "",
   },
+  {
+    image: "/institutions/doda/",
+    location: "YES LITTLE ANGEL ACADEMY - BATHRI, DODA, JAMMU & KASHMIR ",
+    url: "",
+  },
 ];
 
 

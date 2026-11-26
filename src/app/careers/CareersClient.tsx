@@ -87,15 +87,54 @@ export default function CareersClient() {
     <>
       {/* POPUP MODAL */}
       {popup.show && (
-        <div className="popup_overlay">
-          <div className={`popup_card ${popup.type}`}>
-            <h3>{popup.type === "success" ? "✔ Application Sent" : "✖ Notice"}</h3>
+        <div
+          className="popup_overlay"
+          onClick={() => setPopup({ ...popup, show: false })}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className={`popup_card ${popup.type}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="popup_close_x"
+              onClick={() => setPopup({ ...popup, show: false })}
+              aria-label="Close modal"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+
+            <div className="popup_status_badge" aria-hidden="true">
+              {popup.type === "success" ? (
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              ) : (
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              )}
+            </div>
+
+            <h3>
+              {popup.type === "success"
+                ? "Application Submitted"
+                : "Submission Notice"}
+            </h3>
             <p>{popup.message}</p>
             <button
               type="button"
+              className="popup_action_btn"
               onClick={() => setPopup({ ...popup, show: false })}
             >
-              Close
+              Done
             </button>
           </div>
         </div>
@@ -237,12 +276,6 @@ export default function CareersClient() {
 
         <div className="pillars_grid">
           <div className="pillar_card">
-            <div className="icon_wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 21a9 9 0 0 0 9-9c0-4.97-4.03-9-9-9s-9 4.03-9 9a9 9 0 0 0 9 9Z"></path>
-                <path d="M12 7v5l3 3"></path>
-              </svg>
-            </div>
             <h4>Purpose-Driven Mission</h4>
             <p>
               Directly impact students who need mentorship the most. Every day contributes to bridging
@@ -251,13 +284,6 @@ export default function CareersClient() {
           </div>
 
           <div className="pillar_card">
-            <div className="icon_wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-            </div>
             <h4>Pan-India Presence</h4>
             <p>
               Collaborate across 8 Indian states—from Jammu & Kashmir to Kerala, Delhi, Bihar, and West Bengal—enriching
@@ -266,13 +292,6 @@ export default function CareersClient() {
           </div>
 
           <div className="pillar_card">
-            <div className="icon_wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <polyline points="16 11 18 13 22 9"></polyline>
-              </svg>
-            </div>
             <h4>Leadership & Growth</h4>
             <p>
               We prioritize continuous educator development, institutional workshops, and transparent
@@ -281,11 +300,6 @@ export default function CareersClient() {
           </div>
 
           <div className="pillar_card">
-            <div className="icon_wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-              </svg>
-            </div>
             <h4>Supportive Culture</h4>
             <p>
               Join a warm, ethical, and collaborative community where well-being, mutual respect,
@@ -476,10 +490,6 @@ export default function CareersClient() {
                     ) : (
                       <>
                         <span>Submit Application</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <line x1="22" y1="2" x2="11" y2="13"></line>
-                          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
                       </>
                     )}
                   </button>
@@ -487,42 +497,6 @@ export default function CareersClient() {
               </Form>
             )}
           </Formik>
-        </div>
-      </section>
-
-      {/* ====== RECRUITMENT PROCESS ====== */}
-      <section className="careers_process_section wrapper_section">
-        <div className="section_header">
-          <h2>
-            Our Transparent <br /> <span>Recruitment Process</span>
-          </h2>
-          <p>A systematic and supportive journey designed to understand your pedagogical strengths and mission alignment.</p>
-        </div>
-
-        <div className="process_grid">
-          <div className="process_step">
-            <div className="step_number">01</div>
-            <h4>Profile Screening</h4>
-            <p>Our Human Resources desk reviews your background, academic qualifications, and location preferences.</p>
-          </div>
-
-          <div className="process_step">
-            <div className="step_number">02</div>
-            <h4>Exploratory Dialogue</h4>
-            <p>A personal discussion to understand your educational philosophy, career aspirations, and cultural alignment.</p>
-          </div>
-
-          <div className="process_step">
-            <div className="step_number">03</div>
-            <h4>Demo & Assessment</h4>
-            <p>For faculty and coordinators, a short demonstration class or case discussion with academic leadership.</p>
-          </div>
-
-          <div className="process_step">
-            <div className="step_number">04</div>
-            <h4>Welcome & Onboarding</h4>
-            <p>Receive your formal appointment letter, campus placement briefing, and mission orientation.</p>
-          </div>
         </div>
       </section>
 
@@ -535,16 +509,9 @@ export default function CareersClient() {
           </div>
           <div className="inquiry_channels">
             <a href="mailto:info@yesindiafoundation.com" className="channel_item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
               <span>info@yesindiafoundation.com</span>
             </a>
             <a href="tel:+919895662111" className="channel_item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
               <span>+91 989 566 2111</span>
             </a>
           </div>
