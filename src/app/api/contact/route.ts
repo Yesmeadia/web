@@ -102,11 +102,20 @@ export async function POST(req: Request) {
     const cleanEmail = escapeHtml(trimmedEmail);
     const cleanMessage = escapeHtml(trimmedMessage);
 
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      return NextResponse.json(
+        { success: false, message: "Email service is not configured on the server." },
+        { status: 500 }
+      );
+    }
+
+    const smtpPort = Number(process.env.SMTP_PORT) || 465;
+
     // Configure Nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: false, // set true if using 465
+      port: smtpPort,
+      secure: smtpPort === 465,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -116,7 +125,8 @@ export async function POST(req: Request) {
     // Email content
     const mailOptions = {
       from: `"Contact Form" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL, // Your receiving email
+      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
+      replyTo: `"${trimmedName.replace(/"/g, "")}" <${trimmedEmail}>`,
       subject: `New Contact Form Submission from ${cleanName}`,
       text: `New Contact Message\nName: ${trimmedName}\nEmail: ${trimmedEmail}\nMessage:\n${trimmedMessage}`,
       html: `

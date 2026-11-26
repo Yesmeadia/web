@@ -27,10 +27,14 @@ export async function POST(req: Request) {
           },
         });
 
+        const safeName = String(name).trim().replace(/[\r\n"]/g, "");
+        const safeEmail = String(email).trim().replace(/[\r\n]/g, "");
+
         const mailOptions = {
           from: `"YES Careers Portal" <${process.env.SMTP_USER}>`,
           to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
-          subject: `New Career Application: ${name} (${role || "General"})`,
+          replyTo: `"${safeName}" <${safeEmail}>`,
+          subject: `New Career Application: ${safeName} (${role || "General"})`,
           html: `
             <h2>New Career Application Received</h2>
             <p><strong>Full Name:</strong> ${name}</p>
