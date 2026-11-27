@@ -1,4 +1,5 @@
 import MarqueeCarousal from "@/components/ui/MarqueeCarousal";
+import TeachingReinforcement from "@/components/ui/TeachingReinforcement";
 import Image from "next/image";
 
 export default function Page() {
@@ -331,7 +332,57 @@ export default function Page() {
             </div>
           </div>
         </div>
-
+        <div className="yes_genius_container">
+          <div className="left_column">
+            <div className="logo_wrapper">
+              <Image
+                src={"/galaxy_masthead.png"}
+                alt="Galaxy"
+                width={300}
+                height={180}
+                priority
+              />
+            </div>
+            <div className="frequency_card">
+              <h3>4 Clusters</h3>
+              <p className="content">
+                <strong>STEM:</strong> Science, Technology, Engineering &amp;
+                Mathematics
+              </p>
+              <p className="content">
+                <strong>Creativity:</strong> Arts, Media &amp; Education
+              </p>
+              <p className="content">
+                <strong>Administration:</strong> Law, Governance &amp; Public
+                Service
+              </p>
+              <p className="content">
+                <strong>Entrepreneurship:</strong> Commerce, Finance &amp;
+                Management
+              </p>
+            </div>
+          </div>
+          <div className="right_column">
+            <div className="frequency_card">
+              <h3>4 Enrichment Packs</h3>
+              <p className="content">
+                <strong>Communicative Mastery:</strong> Fluency, clarity &amp;
+                confidence in English
+              </p>
+              <p className="content">
+                <strong>Moral Integrity:</strong> Values in purposeful life
+              </p>
+              <p className="content">
+                <strong>Holistic Health:</strong> Physical and mental
+                well-being
+              </p>
+              <p className="content">
+                <strong>Competitive Excellence:</strong> Excellence in
+                competitive exams
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="yes_genius_container">
           <div className="left_column">
             <div className="logo_wrapper">
@@ -431,6 +482,8 @@ export default function Page() {
             </div>
           </div>
         </div>
+
+        <TeachingReinforcement />
       </section>
     </>
   );

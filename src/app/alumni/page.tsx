@@ -111,8 +111,11 @@ const page = () => {
               {statelevelRanks.map((rank, index) => (
                 <div key={index} className="alumni_card">
                   <div className="alumni_image">
-                    <img src={rank.image} alt={rank.name} />
-                    <div className="placeholder_image"></div>
+                    {rank.image ? (
+                      <img src={rank.image} alt={rank.name} loading="lazy" />
+                    ) : (
+                      <div className="placeholder_image"></div>
+                    )}
                   </div>
                   <div className="alumni_info">
                     <h3>{rank.name}</h3>

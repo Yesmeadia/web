@@ -1,107 +1,310 @@
 export const statelevelRanks = [
-    {
+  {
     name: "Salma Aga",
     class: "Class: 12th",
     rank: "3rd Rank",
     award: "Faculty of Science 2021-22",
-    image: "alumni/salma_aga.jpg"
+    image: "ranks/salma_aga.jpg"
   },
   {
     name: "Maryam Sahiba",
     class: "Class: 12th",
     rank: "5th Rank",
     award: "Faculty of Arts 2021-22",
-    image: "alumni/mariyam_sahiba.jpg"
+    image: "ranks/mariyam_sahiba.jpg"
   },
   {
     name: "Sabha Majeed",
     class: "Class: 12th",
     rank: "5th Rank",
     award: "Faculty of Arts 2021-22",
-    image: "alumni/sabha_majeed.jpg"
+    image: "ranks/sabha_majeed.jpg"
   },
   {
     name: "Mohd Fazaan",
     class: "Class: 12th",
     rank: "5th Rank",
     award: "Faculty of Arts 2021-22",
-    image: "alumni/mohd_fazaan.jpeg"
+    image: "ranks/mohd_fazaan.jpeg"
   },
   {
     name: "Noor Fathima",
     class: "Class: 10th",
     rank: "3rd Rank",
     award: "Academic Year 2021-22",
-    image: "alumni/noor_fathima.jpeg"
+    image: "ranks/noor_fathima.jpeg"
   },
   {
     name: "Nusrat Fathima",
     class: "Class: 10th",
     rank: "6th Rank",
     award: "Academic Year 2021-22",
-    image: "alumni/nusrat_fathima.jpeg"
+    image: "ranks/nusrat_fathima.jpeg"
   },
   {
     name: "Shaista Imtiaz",
     class: "Class: 10th",
     rank: "8th Rank",
     award: "Academic Year 2021-22",
-    image: "alumni/shaista_imtiaz.jpeg"
+    image: "ranks/shaista_imtiaz.jpeg"
   },
   {
     name: "Malika Mushtaq",
     class: "Class: 10th",
     rank: "10th Rank",
     award: "Academic Year 2021-22",
-    image: "alumni/malika_mushtaq.jpeg"
+    image: "ranks/malika_mushtaq.jpeg"
   },
   {
     name: "Zoya Bashir",
     class: "Class: 10th",
     rank: "7th Rank",
     award: "Academic Year 2022-23",
-    image: "alumni/zoya_bashir.jpeg"
+    image: "ranks/zoya_bashir.jpeg"
   },
   {
     name: "Mehak Nawaz",
     class: "Class: 10th",
     rank: "9th Rank",
     award: "Academic Year 2022-23",
-    image: "alumni/mehak_nawaz.jpg"
+    image: "ranks/mehak_nawaz.jpg"
   },
   {
     name: "Aasma Qadir",
     class: "Class: 12th",
     rank: "6th Rank",
     award: "Faculty of Arts 2023-24",
-    image: "alumni/aasma_qadir.jpg"
+    image: "ranks/aasma_qadir.jpg"
   },
   {
     name: "Naima Rather",
     class: "Class: 12th",
     rank: "6th Rank",
     award: "Faculty of Arts 2023-24",
-    image: "alumni/naima_rather.jpeg"
+    image: "ranks/naima_rather.jpeg"
   },
   {
     name: "Shaista Imtiaz",
     class: "Class: 12th",
     rank: "6th Rank",
     award: "Faculty of Arts 2023-24",
-    image: "alumni/shaista_imtiaz.jpeg"
+    image: "ranks/shaista_imtiaz.jpeg"
   },
   {
     name: "Iram Naz",
     class: "Class: 10th",
     rank: "8th Rank",
     award: "Academic Year 2023-24",
-    image: "alumni/iram_naz.jpg"
+    image: "ranks/iram_naz.jpg"
   },
   {
     name: "Sobia Tabasam",
     class: "Class: 10th",
     rank: "9th Rank",
     award: "Academic Year 2023-24",
-    image: "alumni/sobia_tabasam.jpeg"
+    image: "ranks/sobia_tabasam.jpeg"
+  },
+  {
+    name: "Taha Hassan",
+    class: "Class: 10th",
+    rank: "5th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/taha_hassan.jpg",
+  },
+  {
+    name: "Samer Un Nisa",
+    class: "Class: 10th",
+    rank: "5th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/samer_un_nisa.jpg",
+  },
+  {
+    name: "Danish Araf",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/danish_araf.jpg",
+  },
+  {
+    name: "Mohd Tahir",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/mohd_tahir.jpg",
+  },
+  {
+    name: "Shabeena Majid",
+    class: "Class: 10th",
+    rank: "9th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/shabeena_majid.jpg",
+  },
+  {
+    name: "Alvi Fatima",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2024-25",
+    image: "/ranks/alvi_fathima.jpg",
+  },
+  {
+    name: "Ateeq Sheikh",
+    class: "Class: 10th",
+    rank: "4th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/ateeq_sheikh.jpg",
+  },
+  {
+    name: "Muntaha Mir",
+    class: "Class: 10th",
+    rank: "4th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/muntaha_mir.jpg",
+  },
+  {
+    name: "Rafia Batool",
+    class: "Class: 10th",
+    rank: "5th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/rafia_batool.jpg",
+  },
+  {
+    name: "Atiqa Jafri",
+    class: "Class: 10th",
+    rank: "6th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/atiqa_jafri.jpg",
+  },
+  {
+    name: "Shagufta Fatima Mir",
+    class: "Class: 10th",
+    rank: "7th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/shagufta_fathima_mir.jpg",
+  },
+  {
+    name: "Sakinder Nazir",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/sikandar_nazir.jpg",
+  },
+  {
+    name: "Sehrish Mushtaq",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/sehrish_mushtaq.jpg",
+  },
+  {
+    name: "Saira Rafiq",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/saira_rafiq.jpg",
+  },
+  {
+    name: "Mussarat Abida",
+    class: "Class: 10th",
+    rank: "8th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/mussarat_abida.jpg",
+  },
+  {
+    name: "Iqra Zainab",
+    class: "Class: 10th",
+    rank: "9th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/iqra_zainab.jpg",
+  },
+  {
+    name: "Farhana Kouser",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/farhana_kouser.jpg",
+  },
+  {
+    name: "Shagufta Ul Islam",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/shagufta_ul_islam.jpg",
+  },
+  {
+    name: "Sobia Akhter",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/sobia_akhter.jpg",
+  },
+  {
+    name: "Areeba Nawaz",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/areeba_nawaz.jpg",
+  },
+  {
+    name: "Nazia Qadir",
+    class: "Class: 12th",
+    rank: "4th Rank",
+    award: "Faculty of Arts 2025-26",
+    image: "/ranks/nazia_qadir.jpg",
+  },
+  {
+    name: "Sarfraz Ahmed",
+    class: "Class: 12th",
+    rank: "8th Rank",
+    award: "Faculty of Science 2024-25",
+    image: "",
+  },
+  {
+    name: "Aisha Fatima",
+    class: "Class: 10th",
+    rank: "5th Rank",
+    award: "Academic Year 2024-25",
+    image: "",
+  },
+  {
+    name: "Saira Kouser",
+    class: "Class: 10th",
+    rank: "7th Rank",
+    award: "Academic Year 2024-25",
+    image: "",
+  },
+  {
+    name: "Asma Sarver",
+    class: "Class: 10th",
+    rank: "6th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/asma_sarver.jpg",
+  },
+  {
+    name: "Sana Azeem",
+    class: "Class: 10th",
+    rank: "9th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/sana_azeem.jpg",
+  },
+  {
+    name: "Ali Asgar",
+    class: "Class: 10th",
+    rank: "9th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/ali_asgar.jpg",
+  },
+  {
+    name: "Ghulam Ahmed",
+    class: "Class: 10th",
+    rank: "9th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/ghulam_ahmed.jpg",
+  },
+  {
+    name: "Ifza Ashrif",
+    class: "Class: 10th",
+    rank: "10th Rank",
+    award: "Academic Year 2025-26",
+    image: "/ranks/ifza_ashrif.jpg",
   },
 ];
