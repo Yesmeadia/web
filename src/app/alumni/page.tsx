@@ -1,5 +1,5 @@
 import AlumniLogin from "@/components/templates/AlumniLogin";
-import { alumniData } from "@/utils/alumniData";
+import AlumniGrid from "@/components/ui/AlumniGrid";
 import { statelevelRanks } from "@/utils/statelevelRanks";
 import React from "react";
 import WorldMapDottedBg from "@/components/ui/WorldMapDottedBg";
@@ -80,25 +80,7 @@ const page = () => {
       </section>
 
       <section className="wrapper_section">
-        <div className="alumni_grid_section" id="alumni-grid">
-          <div className="alumni_grid">
-            {alumniData.map((alumni, index) => (
-              <div key={index} className="alumni_card">
-                <div className="alumni_image">
-                  <img src={alumni.image} alt={alumni.name} />
-                  <div className="placeholder_image"></div>
-                </div>
-                <div className="alumni_info">
-                  <h3>{alumni.name}</h3>
-                  <p className="position">{alumni.position}</p>
-                  {alumni.department && (
-                    <p className="department">{alumni.department}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <AlumniGrid />
       </section>
 
       <section className="alumni_portal_section">

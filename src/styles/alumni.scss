@@ -82,8 +82,8 @@
 
   .alumni_grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 24px;
 
     @media (max-width: 1200px) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -98,6 +98,30 @@
     @media (max-width: 480px) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
+    }
+  }
+
+  .alumni_view_more_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+
+    .alumni_view_more_btn {
+      padding: 12px 34px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2a1b63 0%, #4b2d9f 100%);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(42, 27, 99, 0.24);
+      }
     }
   }
 }
