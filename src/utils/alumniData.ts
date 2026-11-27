@@ -495,6 +495,6 @@ export const alumniData = [
     name: "Leeza Anjum",
     position: "J&K POLICE",
     department: "",
-    image: "/alumni/leeza_anjum.jpeg",
+    image: "/alumni/Leeza_anjum.jpeg",
   },
 ];
