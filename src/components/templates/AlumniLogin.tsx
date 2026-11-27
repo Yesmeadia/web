@@ -26,7 +26,7 @@ const AlumniLogin = () => {
       {/* Background Image */}
       <div className="alumni_bg_wrapper">
         <Image
-          src="/alumni/alumni_login_bg.png"
+          src="/alumni/alumni_login_bg.webp"
           alt="Alumni celebration background"
           width={1400}
           height={750}
